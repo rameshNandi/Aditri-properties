@@ -1,0 +1,34 @@
+"use client";
+
+import React, { useState } from "react";
+import Image from "next/image";
+import logo from "../public/logo2.png";
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="fixed top-0 left-0 right-0 p-4 z-50 mx-auto flex items-center justify-center">
+      <nav className="w-full md:w-[90%] lg:w-[80%] h-[50px] lg:h-[60px] flex items-center justify-between rounded-lg bg-white/50 p-4 backdrop-blur-md shadow-lg">
+        {/* Logo */}
+
+        <div className="flex justify-center items-center gap-1">
+          <div className="lg:w-[250px] lg:h-[50px] w-[40px] h-[40px]">
+          <Image src={logo} alt="logo" className="h-full w-full" />
+          </div>
+        </div>
+
+        {/* Call-to-Action Button */}
+        <button
+          onClick={() => setIsOpen(true)}
+          className="border-2 border-orange-500 flex items-center justify-center space-x-2 rounded-full px-3 md:px-4 lg:px-6 py-1 lg:py-2 text-white text-[15px] lg:text-[16px] xl:text-[17px] font-secondary font-light md:font-bold shadow-md transition duration-300 bg-btnColor hover:bg-btnHover hover:shadow-lg"
+        >
+        
+          <span className="hidden md:block text-orange-500">Contact with us</span>
+          <span className="block md:hidden">Enqury</span>
+          <span className="text-lg -rotate-45 text-orange-500">➜</span>
+        </button>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;
