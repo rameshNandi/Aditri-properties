@@ -17,7 +17,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="mb-4 text-xl font-bold">Luxury Estates</h3>
+            <h3 className="mb-4 text-xl font-bold">Aditri Prooperties</h3>
             <p className="mb-4 text-gray-400">
               Providing exceptional real estate services with a focus on luxury properties and personalized client
               experiences.
