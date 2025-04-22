@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 import Link from "next/link"
+import logo from "../public/logo.jpg";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -17,8 +19,14 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h3 className="mb-4 text-xl font-bold">Aditri Prooperties</h3>
-            <p className="mb-4 text-gray-400">
+             {/* Logo */}
+                    <div className="flex justify-center items-center gap-1">
+                      <div className="lg:w-[250px] lg:h-[50px] w-[40px] h-[40px]">
+                        <Image src={logo} alt="logo" className="h-full w-full" />
+                      </div>
+                    </div>
+
+            <p className="mb-4 text-gray-400 mt-4">
               Providing exceptional real estate services with a focus on luxury properties and personalized client
               experiences.
             </p>

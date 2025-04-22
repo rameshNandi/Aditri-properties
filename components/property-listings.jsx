@@ -90,7 +90,7 @@ export default function PropertyListings() {
   }
 
   return (
-    <section className="mt-48 py-0 px-4">
+    <section className="py-4 mt-0 px-4">
       <div className="container mx-auto max-w-8xl">
         <div className="mb-12 text-center">
           <motion.h2
@@ -167,7 +167,7 @@ export default function PropertyListings() {
 
                   <Link href={`/properties/${property.id}`}>
                     <motion.div
-                      className="flex items-center justify-center rounded-lg bg-gray-900 px-4 py-2 text-white transition-all hover:bg-gray-800"
+                      className="flex items-center justify-center rounded-lg bg-orange-600 px-4 py-2 text-white transition-all hover:bg-orange-700"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >

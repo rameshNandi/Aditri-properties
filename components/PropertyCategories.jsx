@@ -55,7 +55,7 @@ export default function PropertyCategories() {
         />
       </div>
 
-      <div className="container mx-auto max-w-[74%] px-4 py-12 relative z-10">
+      <div className="container mx-auto max-w-[74%] px-4 py-12 mt-0 relative z-10">
         <motion.div
           className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
