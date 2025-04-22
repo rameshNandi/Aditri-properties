@@ -14,7 +14,7 @@ import "swiper/css/pagination"
 const properties = [
   {
     id: 1,
-    title: "PS SANSARA",
+    title: "SANSARA",
     location: "Golabari Howrah",
     price: "$4,500,000",
     image: "/Home/The-River-and-water-Cascade.jpg",
@@ -25,7 +25,7 @@ const properties = [
   },
   {
     id: 2,
-    title: "SRIJAN OPTIMA",
+    title: "OPTIMA",
     location: "New York, NY",
     price: "$2,800,000",
     image: "/Home/2025-01-18.jpg",
@@ -36,7 +36,7 @@ const properties = [
   },
   {
     id: 3,
-    title: "MERLIN NIYASE",
+    title: "NIYASE",
     location: "Est Kolkata Twp",
     price: "$5,900,000",
     image: "/Home/gallery.webp",
@@ -47,7 +47,7 @@ const properties = [
   },
   {
     id: 4,
-    title: "F RESIDENCE MERLIN",
+    title: "F RESIDENCE",
     location: "San Francisco, CA",
     price: "$1,200,000",
     image: "Home/F_Residences_Merlin_6_9bdb0d0a2c.jpg",
@@ -58,7 +58,7 @@ const properties = [
   },
   {
     id: 5,
-    title: "SRIJAN OPTIMA",
+    title: "OPTIMA",
     location: " Rajarhat Chowmata",
     price: "$850,000",
     image: "/Home/srijan2.JPG",
@@ -69,7 +69,7 @@ const properties = [
   },
   {
     id: 6,
-    title: "AMBUJA UTPALA SASTHI",
+    title: "UTPALA SASTHI",
     location: "EM Bypass",
     price: "$3,200,000",
     image: "/Home/10_about_image.jpg",
@@ -194,7 +194,7 @@ export default function PropertyListings() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View All Properties
+              Get in More
             </motion.button>
           </Link>
         </motion.div>

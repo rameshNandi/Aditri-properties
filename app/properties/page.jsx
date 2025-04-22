@@ -26,8 +26,8 @@ export default function RealEstatePage() {
       <header className="bg-black text-white p-4 text-center relative h-64 flex items-center justify-center">
         <div className="container mx-auto">
           {/* <h1 className="text-2xl font-light mb-1"></h1> */}
-          <h2 className="text-3xl font-semibold text-orange-500 mb-1">Encyclopedia For All New Projects</h2>
-          <p className="text-sm mb-4">in Kolkata</p>
+          <h2 className="text-3xl font-semibold text-orange-500 mb-1">Projects</h2>
+          
         </div>
       </header>
 

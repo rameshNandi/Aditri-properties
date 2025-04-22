@@ -57,12 +57,6 @@ export default function OurClients() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <motion.span
-            className="mb-2 inline-block rounded-full border border-orange-500 px-4 py-1 text-sm text-orange-500"
-            whileHover={{ scale: 1.05 }}
-          >
-            Our Partners
-          </motion.span>
           <h2 className="mb-4 text-3xl font-bold text-black md:text-4xl">
             Trusted by <span className="gradient-text">Leading</span> Companies
           </h2>

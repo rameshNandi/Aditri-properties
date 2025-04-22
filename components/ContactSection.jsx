@@ -85,7 +85,7 @@ export default function ContactSection() {
             <h3 className="mb-2 text-xl font-bold text-black">Call Us</h3>
             <p className="mb-4 text-white">Our team is available to assist you during business hours</p>
             <a href="tel:+919876543210" className="text-lg font-semibold text-white hover:underline">
-              +91 9876 543 210
+            +91 9903047647
             </a>
           </motion.div>
 
@@ -106,7 +106,7 @@ export default function ContactSection() {
               href="mailto:info@aditriproperties.com"
               className="text-lg font-semibold text-white hover:underline"
             >
-              info@aditriproperties.com
+            info@aditriproperties.in
             </a>
           </motion.div>
 
@@ -124,7 +124,7 @@ export default function ContactSection() {
             <h3 className="mb-2 text-xl font-bold text-black">Visit Us</h3>
             <p className="mb-4 text-white">Visit our office to meet our team in person</p>
             <address className="not-italic text-lg font-semibold text-white">
-              123 Business Park, Mumbai, India
+            Silver Oak Estate, Rajarhat Main Road, Kalipark Kolkata 700136 Tower 2 ground floor ofc no 2008
             </address>
           </motion.div>
         </motion.div>
