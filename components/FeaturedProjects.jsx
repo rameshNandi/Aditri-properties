@@ -11,7 +11,7 @@ const projects = [
     title: "Aditri Business Tower",
     location: "Mumbai, Maharashtra",
     description: "A premium 30-story commercial tower with state-of-the-art facilities and sustainable design.",
-    image: "/images/commercial1.jpg",
+    image: "/Home.srijan2.jpg",
     type: "commercial",
     area: "120,000 sq ft",
     completion: "2023",
