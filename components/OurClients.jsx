@@ -58,7 +58,7 @@ export default function OurClients() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="mb-4 text-3xl font-bold text-black md:text-4xl">
-            Trusted by <span className="gradient-text">Leading</span> Companies
+            Trusted by <span className="gradient-text text-orange-500">Leading</span> Companies
           </h2>
           <p className="mx-auto max-w-2xl text-gray-400">
             We've partnered with prestigious organizations across various industries to deliver exceptional properties

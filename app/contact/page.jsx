@@ -1,10 +1,13 @@
+
+
+
 import Head from 'next/head';
 
 export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Let's Talk Project - Contact Us</title>
+        <title>Let's Talk Project - Contact</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -16,19 +19,16 @@ export default function ContactPage() {
             <p className="text-sm mb-4">Fill out the form or contact us directly. Our team will get back to you within 24 hours.</p>
             <div>
               <p className="text-sm font-semibold mb-1">EMAIL US:</p>
-              <p className="text-sm mb-2">info@theclickcatalysts.com</p>
+              <p className="text-sm mb-2"> info@aditriproperties.in</p>
             </div>
             <div>
               <p className="text-sm font-semibold mb-1">CALL US:</p>
-              <p className="text-sm mb-2">+91 9038372666</p>
+              <p className="text-sm mb-2">+91 9903047647</p>
             </div>
             <div>
               <p className="text-sm font-semibold mb-1">VISIT US:</p>
               <address className="text-sm not-italic mb-2">
-                Unit 641, 6th floor<br />
-                PS ABACUS, NH12,<br />
-                Action Area IIE, New Town,<br />
-                Kolkata, West Bengal 700157
+              Silver Oak Estate,<br /> Rajarhat Main Road,<br /> Kalipark Kolkata 700136 Tower<br /> 2 ground floor ofc no 2008
               </address>
               <a href="#" className="text-xs underline">Directions on Google Maps</a>
             </div>
@@ -56,8 +56,10 @@ export default function ContactPage() {
           </div>
 
           {/* Right Section - Contact Form */}
+        
           <div className="bg-white p-8 w-1/2">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">Contact Us</h2>
+            <h2 className="mb-4 text-3xl font-bold text-black md:text-4xl">
+            Cont<span className="gradient-text text-orange-500">act</span></h2>
             <form className="space-y-4">
               <div className="flex space-x-2">
                 <div className="w-1/2">

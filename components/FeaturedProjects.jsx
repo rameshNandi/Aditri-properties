@@ -158,7 +158,7 @@ export default function FeaturedProjects() {
             Our Portfolio
           </motion.span>
           <h2 className="mb-4 text-3xl font-bold text-black md:text-4xl">
-            Featured <span className="gradient-text">Projects</span>
+            Featured <span className="gradient-text text-orange-600">Projects</span>
           </h2>
           <p className="mx-auto max-w-2xl text-gray-400">
             Discover our landmark projects that showcase our commitment to excellence and innovation in real estate

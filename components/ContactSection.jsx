@@ -57,7 +57,7 @@ export default function ContactSection() {
             Contact Us
           </motion.span>
           <h2 className="mb-4 text-3xl font-bold text-black md:text-4xl">
-            Get In <span className="gradient-text">Touch</span> With Us
+            Get In <span className="gradient-text text-orange-500">Touch</span> With Us
           </h2>
           <p className="mx-auto max-w-2xl text-gray-400">
             Have questions about our properties or services? Reach out to our team for personalized assistance
@@ -132,7 +132,7 @@ export default function ContactSection() {
         <div className="mt-16 rounded-xl bg-gray-800/50 p-8 md:p-12 backdrop-blur-sm border border-gray-800">
           <div className="grid gap-8 md:grid-cols-2">
             <div>
-              <h3 className="mb-4 text-2xl font-bold text-white">Send Us a Message</h3>
+              <h3 className="mb-4 text-2xl font-bold text-black">Send Us a Message</h3>
               <p className="mb-6 text-black">
                 Fill out the form and our team will get back to you as soon as possible
               </p>

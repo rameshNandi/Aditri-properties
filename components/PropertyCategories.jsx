@@ -70,7 +70,7 @@ export default function PropertyCategories() {
             Our Expertise
           </motion.span>
           <h2 className="mb-4 text-3xl font-bold text-black md:text-4xl">
-            Premium <span className="gradient-text">Property</span> Categories
+            Premium <span className="gradient-text text-orange-600">Property</span> Categories
           </h2>
           <p className="mx-auto max-w-2xl text-gray-400">
             Explore our diverse portfolio of meticulously designed properties that cater to both commercial and
