@@ -90,7 +90,7 @@ export default function PropertyListings() {
   }
 
   return (
-    <section className="mt-48 py-10 px-4">
+    <section className="mt-48 py-0 px-4">
       <div className="container mx-auto max-w-8xl">
         <div className="mb-12 text-center">
           <motion.h2

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 
 const clients = [
-  { id: 1, name: "TechSolutions Inc.", logo: "/images/client1.png" },
+  { id: 1, name: "TechSolutions Inc.", logo: "/Home/istockphoto-639115088-612x612.jpg" },
   { id: 2, name: "Global Finance", logo: "/images/client2.png" },
   { id: 3, name: "Retail Ventures", logo: "/images/client3.png" },
   { id: 4, name: "Luxury Hotels", logo: "/images/client4.png" },
@@ -32,7 +32,7 @@ export default function OurClients() {
   }
 
   return (
-    <section className="py-0 relative overflow-hidden">
+    <section className="py-12 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <motion.div
@@ -49,7 +49,7 @@ export default function OurClients() {
         />
       </div>
 
-      <div className="container mx-auto max-w-6xl px-4 relative z-10">
+      <div className="container mx-auto max-w-[74%] px-4 relative z-10">
         <motion.div
           className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}

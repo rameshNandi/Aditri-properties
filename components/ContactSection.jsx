@@ -42,7 +42,7 @@ export default function ContactSection() {
         />
       </div>
 
-      <div className="container mx-auto max-w-6xl px-4 relative z-10">
+      <div className="container mx-auto max-w-[74%] px-4 relative z-10">
         <motion.div
           className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -82,9 +82,9 @@ export default function ContactSection() {
             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/20">
               <Phone className="h-8 w-8 text-orange-500" />
             </div>
-            <h3 className="mb-2 text-xl font-bold text-white">Call Us</h3>
-            <p className="mb-4 text-black">Our team is available to assist you during business hours</p>
-            <a href="tel:+919876543210" className="text-lg font-semibold text-black hover:underline">
+            <h3 className="mb-2 text-xl font-bold text-black">Call Us</h3>
+            <p className="mb-4 text-white">Our team is available to assist you during business hours</p>
+            <a href="tel:+919876543210" className="text-lg font-semibold text-white hover:underline">
               +91 9876 543 210
             </a>
           </motion.div>
@@ -100,11 +100,11 @@ export default function ContactSection() {
             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/20">
               <Mail className="h-8 w-8 text-orange-500" />
             </div>
-            <h3 className="mb-2 text-xl font-bold text-white">Email Us</h3>
-            <p className="mb-4 text-black">Send us an email and we'll respond within 24 hours</p>
+            <h3 className="mb-2 text-xl font-bold text-black">Email Us</h3>
+            <p className="mb-4 text-white">Send us an email and we'll respond within 24 hours</p>
             <a
               href="mailto:info@aditriproperties.com"
-              className="text-lg font-semibold text-black hover:underline"
+              className="text-lg font-semibold text-white hover:underline"
             >
               info@aditriproperties.com
             </a>
@@ -121,9 +121,9 @@ export default function ContactSection() {
             <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/20">
               <MapPin className="h-8 w-8 text-orange-500" />
             </div>
-            <h3 className="mb-2 text-xl font-bold text-white">Visit Us</h3>
-            <p className="mb-4 text-black">Visit our office to meet our team in person</p>
-            <address className="not-italic text-lg font-semibold text-black">
+            <h3 className="mb-2 text-xl font-bold text-black">Visit Us</h3>
+            <p className="mb-4 text-white">Visit our office to meet our team in person</p>
+            <address className="not-italic text-lg font-semibold text-white">
               123 Business Park, Mumbai, India
             </address>
           </motion.div>
@@ -142,38 +142,38 @@ export default function ContactSection() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-white placeholder-gray-500 focus:border-orange-500 focus:outline-none"
+                    className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-white placeholder-white focus:border-orange-500 focus:outline-none"
                   />
                 </div>
                 <div>
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-white placeholder-gray-500 focus:border-orange-500 focus:outline-none"
+                    className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-white placeholder-white focus:border-orange-500 focus:outline-none"
                   />
                 </div>
                 <div>
                   <input
                     type="tel"
                     placeholder="Your Phone"
-                    className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-white placeholder-gray-500 focus:border-orange-500 focus:outline-none"
+                    className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-white placeholder-white focus:border-orange-500 focus:outline-none"
                   />
                 </div>
                 <div>
                   <textarea
                     placeholder="Your Message"
                     rows={4}
-                    className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-white placeholder-gray-500 focus:border-orange-500 focus:outline-none"
+                    className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-4 py-3 text-white placeholder-white focus:border-orange-500 focus:outline-none"
                   ></textarea>
                 </div>
                 <motion.button
                   type="submit"
-                  className="flex items-center rounded-full gradient-bg px-6 py-3 font-medium text-white shadow-lg transition-all"
+                  className="flex items-center bg-orange-600 px-6 py-3 font-semibold text-white transition-all hover:bg-orange-700"
                   whileHover={{
                     scale: 1.05,
                     boxShadow: "0 0 15px rgba(249, 115, 22, 0.3)",
                   }}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.950 }}
                 >
                   Send Message
                   <Send className="ml-2 h-5 w-5" />

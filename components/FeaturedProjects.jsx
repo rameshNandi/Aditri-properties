@@ -11,7 +11,7 @@ const projects = [
     title: "Aditri Business Tower",
     location: "Mumbai, Maharashtra",
     description: "A premium 30-story commercial tower with state-of-the-art facilities and sustainable design.",
-    image: "/Home.srijan2.jpg",
+    image: "Home/10_about_image.jpg",
     type: "commercial",
     area: "120,000 sq ft",
     completion: "2023",
@@ -22,7 +22,7 @@ const projects = [
     title: "Aditri Luxury Residences",
     location: "Bangalore, Karnataka",
     description: "Exclusive residential apartments with panoramic city views and world-class amenities.",
-    image: "/images/residential1.jpg",
+    image: "/Home/gallery.webp",
     type: "residential",
     area: "85,000 sq ft",
     completion: "2022",
@@ -33,7 +33,7 @@ const projects = [
     title: "Aditri Tech Park",
     location: "Hyderabad, Telangana",
     description: "Modern office spaces designed for tech companies with collaborative environments.",
-    image: "/images/commercial2.jpg",
+    image: "/Home/residential.jpg",
     type: "commercial",
     area: "200,000 sq ft",
     completion: "2024",
@@ -44,7 +44,7 @@ const projects = [
     title: "Aditri Horizon Villas",
     location: "Goa",
     description: "Beachfront luxury villas with private pools and exclusive access to pristine beaches.",
-    image: "/images/residential2.jpg",
+    image: "/Home/The-River-and-water-Cascade.jpg",
     type: "residential",
     area: "45,000 sq ft",
     completion: "2023",
@@ -55,7 +55,7 @@ const projects = [
     title: "Aditri Retail Plaza",
     location: "Delhi NCR",
     description: "Premium retail spaces in a high-footfall location with modern architecture.",
-    image: "/images/commercial3.jpg",
+    image: "/Home/2024-11-16.jpg",
     type: "commercial",
     area: "75,000 sq ft",
     completion: "2022",
@@ -113,7 +113,7 @@ export default function FeaturedProjects() {
   }
 
   return (
-    <section className="py-0 relative overflow-hidden">
+    <section className="py-2 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <motion.div
@@ -143,7 +143,7 @@ export default function FeaturedProjects() {
         />
       </div>
 
-      <div className="container mx-auto max-w-6xl px-4 relative z-10">
+      <div className="container mx-auto max-w-[74%] px-4 relative z-10">
         <motion.div
           className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -216,19 +216,19 @@ export default function FeaturedProjects() {
                     </div>
                   </div>
 
-                  <Link href={`/projects/${projects[activeIndex].id}`}>
-                    <motion.button
-                      className="flex items-center rounded-full gradient-bg px-6 py-3 font-medium text-white shadow-lg transition-all"
-                      whileHover={{
-                        scale: 1.05,
-                        boxShadow: "0 0 15px rgba(249, 115, 22, 0.3)",
-                      }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      View Project Details
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </motion.button>
-                  </Link>
+                  <Link href="/properties">
+                  <motion.button
+                    className="rounded-md bg-orange-600 px-6 py-3 font-semibold text-white transition-all hover:bg-orange-700"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                  View Project Details
+                  </motion.button>
+                </Link>
+                  
+                
+                     
+                     
                 </div>
               </div>
             </motion.div>
