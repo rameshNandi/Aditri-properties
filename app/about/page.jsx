@@ -9,6 +9,7 @@ import Navbar from "@/components/NavBar"
 import Head from 'next/head'
 import Image from 'next/image'
 import { motion } from "framer-motion"
+import Footer from "@/components/footer";
 
 export default function AboutUs() {
   return (
@@ -152,6 +153,7 @@ export default function AboutUs() {
           </motion.div>
         </div>
       </motion.section>
+       <Footer />
     </>
   )
 }

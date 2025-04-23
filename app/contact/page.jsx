@@ -1,132 +1,85 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useState } from "react"
 import {
-  Search, MapPin, Star, ChevronRight, Heart,
-  Calendar, Building, ArrowRight, ChevronDown, Filter
+  Search,
+  MapPin,
+  Star,
+  ChevronRight,
+  Heart,
+  Calendar,
+  Building,
+  ArrowRight,
+  ChevronDown,
+  Filter,
 } from "lucide-react"
 import Navbar from "@/components/NavBar"
-import Head from 'next/head'
+import Footer from "@/components/footer";
 
-export default function ContactPage() {
+export default function ContactForm() {
   return (
     <>
-      <Head>
-        <title>Let's Talk Project - Contact</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <div className="min-h-screen bg-[#f8f1e7] flex items-center justify-center p-4">
+      <div className="bg-white rounded-xl shadow-lg p-6 md:p-10 w-full max-w-6xl grid md:grid-cols-2 gap-6">
       <Navbar />
+        {/* Left Section */}
+        
+        <div className="space-y-4">
+          <img src="/Home/woman.webp" alt="Contact Illustration" className="w-80 mx-auto md:mx-0" />
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mt-9">
+          Contact<span className="text-orange-500">Us</span>
+        </h2>
+          <p className="text-sm text-gray-600">📍 Silver Oak Estate, Rajarhat Main Road, <br/>Kalipark Kolkata 700136 <br />Tower 2 ground floor ofc no 2008</p>
+          <p className="text-sm text-gray-600">📞 Phone - +91 9903047647</p>
+          <p className="text-sm text-gray-600">✉️ Email - info@aditriproperties.in</p>
+          <p className="text-sm text-gray-600">🌐 Web - <a href="https://www.owcvac.com" className="text-blue-500 underline">https://www.owcvac.com</a></p>
+        </div>
+        
 
-      <motion.div
-        className="min-h-screen bg-gray-100 py-6 flex items-center justify-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.div
-          className="bg-white rounded-md shadow-md overflow-hidden max-w-3xl w-full mx-auto flex flex-col md:flex-row"
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-        >
-          {/* Left Section */}
-          <motion.div
-            className="bg-sky-500 text-white p-8 md:w-1/2"
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-          >
-            <h2 className="text-2xl font-semibold mb-4">Let's talk about your project</h2>
-            <p className="text-sm mb-4">Fill out the form or contact us directly. Our team will get back to you within 24 hours.</p>
-            <div>
-              <p className="text-sm font-semibold mb-1">EMAIL US:</p>
-              <p className="text-sm mb-2">info@aditriproperties.in</p>
+        {/* Right Section - Form */}
+        <div>
+          <h2 className="text-lg font-semibold mb-2">Contact Us Form</h2>
+          <p className="text-sm text-gray-500 mb-4">Please feel free to contact us if you have any comment</p>
+          <form className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <input type="text" placeholder="Name" className="border rounded px-3 py-2 w-full text-sm" />
+              <select className="border rounded px-3 py-2 w-full text-sm">
+                <option>Select</option>
+                <option>Sales</option>
+                <option>Support</option>
+              </select>
             </div>
-            <div>
-              <p className="text-sm font-semibold mb-1">CALL US:</p>
-              <p className="text-sm mb-2">+91 9903047647</p>
+            <div className="grid grid-cols-2 gap-4">
+              <input type="email" placeholder="Email Address" className="border rounded px-3 py-2 w-full text-sm" />
+              <input type="text" placeholder="Title" className="border rounded px-3 py-2 w-full text-sm" />
             </div>
-            <div>
-              <p className="text-sm font-semibold mb-1">VISIT US:</p>
-              <address className="text-sm not-italic mb-2">
-                Silver Oak Estate,<br /> Rajarhat Main Road,<br /> Kalipark Kolkata 700136 Tower<br /> 2 ground floor ofc no 2008
-              </address>
-              <a href="#" className="text-xs underline">Directions on Google Maps</a>
+            <div className="grid grid-cols-2 gap-4">
+              <input type="text" placeholder="Company" className="border rounded px-3 py-2 w-full text-sm" />
+              <input type="text" placeholder="Phone Number" className="border rounded px-3 py-2 w-full text-sm" />
             </div>
-            <div className="mt-6">
-              <p className="text-sm font-semibold mb-1">FIND US:</p>
-              <div className="flex space-x-2 ">
-                {["f", "X", "in", "@", "W"].map((icon, i) => (
-                  <motion.a
-                    key={i}
-                    href="#"
-                    className="text-white text-xl hover:scale-110 "
-                    whileHover={{ scale: 1.2 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {icon}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+            <textarea placeholder="write comment..." className="border rounded px-3 py-2 w-full text-sm h-24"></textarea>
 
-          {/* Right Section - Contact Form */}
-          <motion.div
-            className="bg-white/50 p-8 md:w-1/2"
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-          >
-            <h2 className="mb-4 text-3xl font-bold text-black md:text-4xl">
-              Cont<span className="gradient-text text-orange-500">act</span>
-            </h2>
-            <form className="space-y-4">
-              <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
-                <div className="w-full sm:w-1/2">
-                  <label htmlFor="firstName" className="block text-gray-700 text-sm font-bold mb-2">Your First Name</label>
-                  <input type="text" id="firstName" className="input-style" />
-                </div>
-                <div className="w-full sm:w-1/2">
-                  <label htmlFor="lastName" className="block text-gray-700 text-sm font-bold mb-2">Your Last Name</label>
-                  <input type="text" id="lastName" className="input-style" />
-                </div>
+            <div>
+              <h3 className="text-sm font-medium mb-1">Captcha</h3>
+              <div className="flex items-center gap-2">
+                <input type="text" placeholder="Enter Captcha" className="border rounded px-3 py-2 text-sm w-1/2" />
+                <img src="/Home/captcha.jpg" alt="captcha" className="h-10" />
+                <button type="button" className="bg-orange-500 text-white px-3 py-2 rounded hover:bg-orange-600">
+                  ↻
+                </button>
               </div>
-              <div>
-                <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Your Email</label>
-                <input type="email" id="email" className="input-style" />
-              </div>
-              <div>
-                <label htmlFor="mobile" className="block text-gray-700 text-sm font-bold mb-2">Your Mobile</label>
-                <input type="tel" id="mobile" className="input-style" />
-              </div>
-              <div>
-                <label htmlFor="company" className="block text-gray-700 text-sm font-bold mb-2">Company</label>
-                <input type="text" id="company" className="input-style" />
-              </div>
-              <div>
-                <label htmlFor="inquiry" className="block text-gray-700 text-sm font-bold mb-2">Inquiry</label>
-                <select id="inquiry" className="input-style">
-                  <option>Select an option</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Your Message</label>
-                <textarea id="message" rows="4" className="input-style"></textarea>
-              </div>
-              <motion.button
-                type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Submit
-              </motion.button>
-            </form>
-          </motion.div>
-        </motion.div>
-      </motion.div>
+            </div>
+
+            <div className="flex gap-4 mt-4">
+              <button type="submit" className="bg-orange-500 text-white font-medium px-6 py-2 rounded-full hover:bg-orange-600">Submit</button>
+              <button type="reset" className="border bg-orange-500 text-white font-medium px-6 py-2 rounded-full hover:bg-orange-600">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+    <Footer />
     </>
-  )
+  );
 }

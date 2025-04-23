@@ -14,11 +14,13 @@ import {
   Filter,
 } from "lucide-react"
 import Navbar from "@/components/NavBar"
+import Footer from "@/components/footer";
 
 export default function RealEstatePage() {
   const [activeTab, setActiveTab] = useState("New Projects")
 
   return (
+    <>
     <div className="bg-gray-100 min-h-screen font-sans text-gray-800">
         {/* Navbar */}
         <Navbar />
@@ -750,5 +752,7 @@ export default function RealEstatePage() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   )
 }
