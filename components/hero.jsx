@@ -77,15 +77,7 @@ export default function Hero() {
                 Browse Properties
               </motion.button>
             </Link>
-            <Link href="/contact">
-              <motion.button
-                className="rounded-md border-2 border-white bg-transparent px-6 py-3 font-semibold text-white transition-all hover:bg-white/10"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Contact Agent
-              </motion.button>
-            </Link>
+           
           </motion.div>
         </div>
       </div>

@@ -14,7 +14,7 @@ const Navbar = () => {
         
         {/* Logo */}
         <div className="flex justify-center items-center gap-1">
-          <div className="lg:w-[250px] lg:h-[50px] w-[40px] h-[40px]">
+          <div className="lg:w-[250px] lg:h-[50px] w-[150px] h-[40px]">
             <Image src={logo} alt="logo" className="h-full w-full" />
           </div>
         </div>
@@ -23,19 +23,19 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-6 text-[15px] lg:text-[16px] xl:text-[17px] font-medium text-gray-800">
           <Link href="/" className="hover:text-orange-500 transition">Home</Link>
           <Link href="/about" className="hover:text-orange-500 transition">About</Link>
-          <Link href="/service" className="hover:text-orange-500 transition">Services</Link>
+          <Link href="/services" className="hover:text-orange-500 transition">Services</Link>
           <Link href="/contact" className="hover:text-orange-500 transition">Contact</Link>
         </div>
 
         {/* Call-to-Action Button */}
-        <button
+       {/* <button
           onClick={() => setIsOpen(true)}
           className="border-2 border-orange-500 flex items-center justify-center space-x-2 rounded-full px-3 md:px-4 lg:px-6 py-1 lg:py-2 text-white text-[15px] lg:text-[16px] xl:text-[17px] font-secondary font-light md:font-bold shadow-md transition duration-300 bg-btnColor hover:bg-btnHover hover:shadow-lg"
         >
           <span className="hidden md:block text-white">Contact with us</span>
           <span className="block md:hidden">Enquiry</span>
           <span className="text-lg -rotate-45 text-white">➜</span>
-        </button>
+        </button> */}
       </nav>
     </div>
   );

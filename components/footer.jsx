@@ -21,7 +21,7 @@ export default function Footer() {
           >
              {/* Logo */}
                     <div className="flex justify-center items-center gap-1">
-                      <div className="lg:w-[250px] lg:h-[50px] w-[40px] h-[40px]">
+                      <div className="lg:w-[250px] lg:h-[50px] w-[150px] h-[40px]">
                         <Image src={logo} alt="logo" className="h-full w-full" />
                       </div>
                     </div>

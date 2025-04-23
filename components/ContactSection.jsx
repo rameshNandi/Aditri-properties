@@ -1,5 +1,7 @@
 "use client"
 
+
+
 import { motion } from "framer-motion"
 import { Phone, Mail, MapPin, Send, ArrowRight } from "lucide-react"
 import Link from "next/link"
@@ -25,6 +27,7 @@ export default function ContactSection() {
   }
 
   return (
+    
     <section className="py-20 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
@@ -72,15 +75,15 @@ export default function ContactSection() {
           viewport={{ once: true }}
         >
           <motion.div
-            className="rounded-xl bg-gray-800/50 p-8 backdrop-blur-sm border border-gray-800 hover:border-orange-500 transition-all duration-300"
+            className="rounded-xl bg-gray-500/50 p-8 backdrop-blur-sm border border-gray-800 hover:border-orange-500 transition-all duration-300"
             variants={itemVariants}
             whileHover={{
               y: -10,
               boxShadow: "0 10px 30px -5px rgba(0, 0, 0, 0.3)",
             }}
           >
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/20">
-              <Phone className="h-8 w-8 text-orange-500" />
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500">
+              <Phone className="h-8 w-8 text-white" />
             </div>
             <h3 className="mb-2 text-xl font-bold text-black">Call Us</h3>
             <p className="mb-4 text-white">Our team is available to assist you during business hours</p>
@@ -90,15 +93,15 @@ export default function ContactSection() {
           </motion.div>
 
           <motion.div
-            className="rounded-xl bg-gray-800/50 p-8 backdrop-blur-sm border border-gray-800 hover:border-orange-500 transition-all duration-300"
+            className="rounded-xl bg-gray-500/50 p-8 backdrop-blur-sm border border-gray-800 hover:border-orange-500 transition-all duration-300"
             variants={itemVariants}
             whileHover={{
               y: -10,
               boxShadow: "0 10px 30px -5px rgba(0, 0, 0, 0.3)",
             }}
           >
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/20">
-              <Mail className="h-8 w-8 text-orange-500" />
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500">
+              <Mail className="h-8 w-8 text-white" />
             </div>
             <h3 className="mb-2 text-xl font-bold text-black">Email Us</h3>
             <p className="mb-4 text-white">Send us an email and we'll respond within 24 hours</p>
@@ -111,15 +114,15 @@ export default function ContactSection() {
           </motion.div>
 
           <motion.div
-            className="rounded-xl bg-gray-800/50 p-8 backdrop-blur-sm border border-gray-800 hover:border-orange-500 transition-all duration-300"
+            className="rounded-xl bg-gray-500/50 p-8 backdrop-blur-sm border border-gray-800 hover:border-orange-500 transition-all duration-300"
             variants={itemVariants}
             whileHover={{
               y: -10,
               boxShadow: "0 10px 30px -5px rgba(0, 0, 0, 0.3)",
             }}
           >
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/20">
-              <MapPin className="h-8 w-8 text-orange-500" />
+            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500">
+              <MapPin className="h-8 w-8 text-white" />
             </div>
             <h3 className="mb-2 text-xl font-bold text-black">Visit Us</h3>
             <p className="mb-4 text-white">Visit our office to meet our team in person</p>
@@ -129,7 +132,7 @@ export default function ContactSection() {
           </motion.div>
         </motion.div>
 
-        <div className="mt-16 rounded-xl bg-gray-800/50 p-8 md:p-12 backdrop-blur-sm border border-gray-800">
+        <div className="mt-16 rounded-xl bg-gray-500/50 p-8 md:p-12 backdrop-blur-sm border border-gray-800">
           <div className="grid gap-8 md:grid-cols-2">
             <div>
               <h3 className="mb-4 text-2xl font-bold text-black">Send Us a Message</h3>
