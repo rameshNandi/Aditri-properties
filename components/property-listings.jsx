@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, A11y } from "swiper/modules"
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules"
 import { Heart, BedDouble, Bath, Square, ArrowRight } from "lucide-react"
 
 import "swiper/css"
@@ -16,8 +16,7 @@ const properties = [
     id: 1,
     title: "SANSARA",
     location: "Golabari Howrah",
-    price: "$4,500,000",
-    image: "/Home/The-River-and-water-Cascade.jpg",
+    image: "/Home/sansarapic.jpg",
     beds: 5,
     baths: 4,
     sqft: 4200,
@@ -26,8 +25,7 @@ const properties = [
   {
     id: 2,
     title: "OPTIMA",
-    location: "New York, NY",
-    price: "$2,800,000",
+    location: "Newtowan, Kalaberia, West Bengal",
     image: "/Home/2025-01-18.jpg",
     beds: 3,
     baths: 3.5,
@@ -37,8 +35,7 @@ const properties = [
   {
     id: 3,
     title: "NIYASE",
-    location: "Est Kolkata Twp",
-    price: "$5,900,000",
+    location: "East Kolkata Twp",
     image: "/Home/gallery.webp",
     beds: 6,
     baths: 5,
@@ -47,10 +44,9 @@ const properties = [
   },
   {
     id: 4,
-    title: "F RESIDENCE",
-    location: "San Francisco, CA",
-    price: "$1,200,000",
-    image: "Home/F_Residences_Merlin_6_9bdb0d0a2c.jpg",
+    title: "F RESIDENCY",
+    location: "Rajarhat",
+    image: "Home/merlin4.webp",
     beds: 2,
     baths: 2,
     sqft: 1500,
@@ -60,7 +56,6 @@ const properties = [
     id: 5,
     title: "OPTIMA",
     location: " Rajarhat Chowmata",
-    price: "$850,000",
     image: "/Home/srijan2.JPG",
     beds: 4,
     baths: 3,
@@ -71,7 +66,6 @@ const properties = [
     id: 6,
     title: "UTPALA SASTHI",
     location: "EM Bypass",
-    price: "$3,200,000",
     image: "/Home/10_about_image.jpg",
     beds: 4,
     baths: 3.5,
@@ -114,16 +108,20 @@ export default function PropertyListings() {
         </div>
 
         <Swiper
-          modules={[Navigation, Pagination, A11y]}
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 4 },
-          }}
-        >
+        modules={[Navigation, Pagination, A11y, Autoplay]}
+        spaceBetween={30}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 2000, // Change slide every 3 seconds
+          disableOnInteraction: false, // Keeps autoplay active after interaction
+        }}
+        breakpoints={{
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 4 },
+        }}
+      >
           {properties.map((property) => (
             <SwiperSlide key={property.id}>
               <div className="group overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl">
@@ -165,6 +163,22 @@ export default function PropertyListings() {
                     <span className="text-sm">{property.location}</span>
                   </div>
 
+                  
+                  <div className="mb-6 flex justify-between border-t border-gray-100 pt-4">
+                    <div className="flex items-center">
+                      <BedDouble className="mr-1 h-4 w-4 text-gray-500" />
+                      <span className="text-sm text-gray-700">{property.beds} Beds</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Bath className="mr-1 h-4 w-4 text-gray-500" />
+                      <span className="text-sm text-gray-700">{property.baths} Baths</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Square className="mr-1 h-4 w-4 text-gray-500" />
+                      <span className="text-sm text-gray-700">{property.sqft} sqft</span>
+                    </div>
+                  </div>
+                  
                   <Link href={`/properties/${property.id}`}>
                     <motion.div
                       className="flex items-center justify-center rounded-lg bg-orange-600 px-4 py-2 text-white transition-all hover:bg-orange-700"
@@ -194,7 +208,7 @@ export default function PropertyListings() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Get in More
+              View More
             </motion.button>
           </Link>
         </motion.div>

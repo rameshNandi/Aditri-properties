@@ -17,14 +17,14 @@ export default function Home() {
       <NavBar />
       <Hero />
       <SearchBar />
-      <PropertyCategories/>
-      <FeaturedProjects/>
+      <PropertyCategories />
+      <FeaturedProjects />
       <PropertyListings />
       {/* <CommercialOptions/> */}
       <Testimonials />
       {/* <MapSection /> */}
-      <OurClients/>
-      <ContactSection/>
+      <OurClients />
+      <ContactSection />
       <Footer />
     </main>
   )

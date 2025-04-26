@@ -8,56 +8,56 @@ import Link from "next/link"
 const projects = [
   {
     id: 1,
-    title: "Aditri Business Tower",
-    location: "Mumbai, Maharashtra",
-    description: "A premium 30-story commercial tower with state-of-the-art facilities and sustainable design.",
-    image: "Home/10_about_image.jpg",
+    title: "Optima",
+    location: "Newtown Kalaberia, West Bangal",
+    description: "Experience Modern Living with Premium Amenities at Srijan Optima, New Town, Kolkata Srijan Realty has launched Srijan Optima a residential project located in Rajarhat New Town, Kolkata.",
+    image: "Home/optima2.jpg",
     type: "commercial",
-    area: "120,000 sq ft",
+    area: "11.3 sq ft",
     completion: "2023",
     featured: true,
   },
   {
     id: 2,
-    title: "Aditri Luxury Residences",
-    location: "Bangalore, Karnataka",
-    description: "Exclusive residential apartments with panoramic city views and world-class amenities.",
-    image: "/Home/gallery.webp",
+    title: "Sansara",
+    location: "Golabari Howrah",
+    description: "Sansara is a luxury residential project in Howrah, West Bengal, developed by the PS Group.",
+    image: "/Home/sansara2.jpg",
     type: "residential",
-    area: "85,000 sq ft",
+    area: "17.4 sq ft",
     completion: "2022",
     featured: true,
   },
   {
     id: 3,
-    title: "Aditri Tech Park",
-    location: "Hyderabad, Telangana",
-    description: "Modern office spaces designed for tech companies with collaborative environments.",
-    image: "/Home/residential.jpg",
+    title: "Niyasa",
+    location: "East Kolkata Township",
+    description: "Merlin Niyasa is a luxury residential project in Kolkata, located within the East Kolkata Township, specifically near Ruby Crossing on the EM Bypass. ",
+    image: "/Home/niyasha2.webp",
     type: "commercial",
-    area: "200,000 sq ft",
+    area: "230610 sq. ft",
     completion: "2024",
     featured: true,
   },
   {
     id: 4,
-    title: "Aditri Horizon Villas",
-    location: "Goa",
-    description: "Beachfront luxury villas with private pools and exclusive access to pristine beaches.",
-    image: "/Home/The-River-and-water-Cascade.jpg",
+    title: "Utara Sasthi",
+    location: "EM Bypass, Kolkata",
+    description: "Ambuja Utpalaa is a luxury residential project in Ruby, Kolkata, developed by Ambuja Neotia. It offers spacious 3, 4, and 5 BHK apartments with a range of amenities and modern design. ",
+    image: "/Home/10_about_image.jpg",
     type: "residential",
-    area: "45,000 sq ft",
+    area: "1,698 - 5,145  sq ft",
     completion: "2023",
     featured: true,
   },
   {
     id: 5,
-    title: "Aditri Retail Plaza",
-    location: "Delhi NCR",
-    description: "Premium retail spaces in a high-footfall location with modern architecture.",
-    image: "/Home/2024-11-16.jpg",
+    title: "F Residences",
+    location: "Rajarhat",
+    description: "F Residences, a luxury development in Rajarhat, Kolkata, is a collaboration between Merlin Group and Fashion TV",
+    image: "/Home/merlin4.webp",
     type: "commercial",
-    area: "75,000 sq ft",
+    area: "960 - 1570sq ft",
     completion: "2022",
     featured: true,
   },
@@ -151,12 +151,6 @@ export default function FeaturedProjects() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <motion.span
-            className="mb-2 inline-block rounded-full border border-orange-500 px-4 py-1 text-sm text-orange-500"
-            whileHover={{ scale: 1.05 }}
-          >
-            Our Portfolio
-          </motion.span>
           <h2 className="mb-4 text-3xl font-bold text-black md:text-4xl">
             Featured <span className="gradient-text text-orange-600">Projects</span>
           </h2>
@@ -269,7 +263,7 @@ export default function FeaturedProjects() {
         </div>
 
         <div className="mt-12 text-center">
-          <Link href="/projects">
+          <Link href="/properties">
             <motion.button
               className="rounded-full border border-orange-500 bg-transparent px-8 py-3 font-medium text-orange-500 transition-all hover:bg-orange-500 hover:text-white"
               whileHover={{ scale: 1.05 }}

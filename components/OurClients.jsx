@@ -3,12 +3,12 @@
 import { motion } from "framer-motion"
 
 const clients = [
-  { id: 1, name: "TechSolutions Inc.", logo: "/Home/istockphoto-639115088-612x612.jpg" },
-  { id: 2, name: "Global Finance", logo: "/images/client2.png" },
-  { id: 3, name: "Retail Ventures", logo: "/images/client3.png" },
-  { id: 4, name: "Luxury Hotels", logo: "/images/client4.png" },
-  { id: 5, name: "Healthcare Group", logo: "/images/client5.png" },
-  { id: 6, name: "Education Institute", logo: "/images/client6.png" },
+  { id: 1, name: "TechSolutions Inc.", logo: "/Home/Optime_logo_2019_rgb.png" },
+  { id: 2, name: "Global Finance", logo: "/Home/merlin-group-logo.png" },
+  { id: 3, name: "Retail Ventures", logo: "/Home/kruqlpw_1729333702_525789081_O.jpg" },
+  { id: 4, name: "Luxury Hotels", logo: "/Home/vinayaklogo.png" },
+  { id: 5, name: "Healthcare Group", logo: "/Home/rubylogo.jpeg" },
+  { id: 6, name: "Education Institute", logo: "/Home/pslogo.png" },
 ]
 
 export default function OurClients() {
@@ -75,7 +75,7 @@ export default function OurClients() {
           {clients.map((client) => (
             <motion.div
               key={client.id}
-              className="flex items-center justify-center rounded-xl bg-gray-800/50 p-8 backdrop-blur-sm border border-gray-800 hover:border-orange-500 transition-all duration-300"
+              className="flex items-center justify-center rounded-xl bg-white p-8 backdrop-blur-sm border border-orange-200 hover:border-orange-500 transition-all duration-300"
               variants={itemVariants}
               whileHover={{
                 y: -10,
@@ -83,7 +83,7 @@ export default function OurClients() {
               }}
             >
               <img
-                src={client.logo || "/placeholder.svg?height=80&width=120"}
+                src={client.logo || "/placeholder.svg?height=80&width=180"}
                 alt={client.name}
                 className="h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
               />

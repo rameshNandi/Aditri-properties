@@ -88,7 +88,7 @@ export default function PropertyCategories() {
           <motion.div className="group relative overflow-hidden rounded-2xl" variants={itemVariants}>
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80 z-10"></div>
             <img
-              src="/Home/The-River-and-water-Cascade.jpg"
+              src="/Home/Niyasha2.webp"
               alt="Commercial Properties"
               className="h-[500px] w-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
@@ -120,7 +120,7 @@ export default function PropertyCategories() {
           <motion.div className="group relative overflow-hidden rounded-2xl" variants={itemVariants}>
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80 z-10"></div>
             <img
-              src="/Home/commercial.jpg"
+              src="/Home/merlin4.webp"
               alt="Residential Properties"
               className="h-[500px] w-full object-cover transition-transform duration-700 group-hover:scale-110"
             />

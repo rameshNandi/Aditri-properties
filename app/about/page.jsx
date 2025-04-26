@@ -1,159 +1,143 @@
-"use client"
+"use client";
 
 import { useState } from "react"
 import {
-  Search, MapPin, Star, ChevronRight, Heart,
-  Calendar, Building, ArrowRight, ChevronDown, Filter
+  Search,
+  MapPin,
+  Star,
+  ChevronRight,
+  Heart,
+  Calendar,
+  Building,
+  ArrowRight,
+  ChevronDown,
+  Filter,
 } from "lucide-react"
 import Navbar from "@/components/NavBar"
-import Head from 'next/head'
-import Image from 'next/image'
-import { motion } from "framer-motion"
 import Footer from "@/components/footer";
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
-export default function AboutUs() {
+const projects = [
+  {
+    title: 'Merlin',
+    desc: 'Merlin Group is a renowned real estate developer, crafting innovative residential and commercial spaces with a legacy of excellence.',
+    image: '/Home/merlin4.webp'
+  },
+  {
+    title: 'Optima',
+    desc: 'Srijan offers innovative spaces. Optima ensures modern efficiency, and Peace embodies tranquil living with thoughtful architecture and design.',
+    image: '/Home/optima2.jpg'
+  },
+  {
+    title: 'Ruby Project',
+    desc: 'Ruby Project offers serene living spaces designed for tranquility, blending modern architecture with peaceful surroundings for ultimate relaxation.',
+    image: '/Home/ruby.jpg'
+  },
+  { 
+    title: 'Sansara',
+    desc: 'PS Group’s Sansara offers serene living with innovative design, blending luxury and tranquility for a peaceful, harmonious lifestyle.',
+    image: '/Home/sansara2.jpg'
+  },
+  {
+    title: 'Amara',
+    desc: 'Vinayak Amara offers tranquil living amidst lush green surroundings, blending modern amenities with serene environments for ultimate peace.',
+    image: '/Home/amara.jpg'
+  },
+  {
+    title: 'Optima',
+    desc: 'Srijan offers innovative spaces. Optima ensures modern efficiency, and Peace embodies tranquil living with thoughtful architecture and design.',
+    image: '/Home/optima2.jpg'
+  },
+];
+
+export default function Home() {
   return (
     <>
-      <Navbar />
-      <Head>
-        <title>About Us</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <motion.section
-        className="bg-gray-100 py-12 sm:py-16 lg:py-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <motion.div
-            className="text-center mb-12"
-            initial={{ y: 40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7 }}
+    <Navbar />
+    <div className="bg-white text-[#112233]">
+      <div className="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            src="/Home/The-River-and-water-Cascade.jpg"
+            alt="Team Working"
+            width={500}
+            height={500}
+            className="rounded-lg shadow-xl"
+          />
+          <motion.div 
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm w-max -mt-10 ml-4 relative z-10"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mt-9">
-              Abo<span className="text-orange-500">ut</span>
-            </h2>
-            <p className="mt-4 text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
-              We are experts in civil engineering, dedicated to creating innovative and sustainable
-              infrastructure that enhances communities.
-            </p>
+            25+ Years Experience
           </motion.div>
+        </motion.div>
 
-          {/* Content Grid */}
-          <motion.div
-            className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ staggerChildren: 0.3 }}
-            variants={{
-              visible: { transition: { staggerChildren: 0.2 } },
-              hidden: {},
-            }}
-          >
-            {/* Card 1 */}
-            <motion.div
-              className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.6 }}
-            >
-              <motion.div className="relative w-full h-48 sm:h-56" whileHover={{ scale: 1.03 }}>
-                <Image
-                  src="/Home/The-River-and-water-Cascade.jpg"
-                  alt="Construction Workers"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-t-lg"
-                />
-              </motion.div>
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Building a Sustainable Future</h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    We excel in civil engineering and construction, delivering innovative and sustainable solutions
-                    with a focus on quality, safety, and efficiency.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Card 2 */}
-            <motion.div
-              className="bg-white rounded-lg shadow-md overflow-hidden md:col-span-2 flex flex-col"
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.7 }}
-            >
-              <motion.div className="relative w-full h-64 sm:h-72" whileHover={{ scale: 1.02 }}>
-                <Image
-                  src="/Home/2025-01-18.jpg"
-                  alt="Engineers Meeting"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-t-lg"
-                />
-              </motion.div>
-              <div className="p-6 flex-1 flex flex-col justify-between">
-              <motion.div
-              className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ staggerChildren: 0.15 }}
-              variants={{ visible: {}, hidden: {} }}
-            >
-              {[
-                { number: "20+", label: "Years Experience" },
-                { number: "80+", label: "Project Completed" },
-                { number: "50+", label: "Satisfied Clients" },
-              ].map((stat, idx) => (
-                <motion.div
-                  key={idx}
-                  className="p-4 rounded text-center cursor-default"
-                  initial={{ opacity: 0, scale: 0.9, backgroundColor: "#f3f4f6" }} // Tailwind's bg-gray-100
-                  animate={{ opacity: 1, scale: 1, backgroundColor: "#f3f4f6" }}
-                  whileHover={{
-                    scale: 1.05,
-                    backgroundColor: "#f97316", // Tailwind's orange-500
-                    color: "#ffffff",
-                  }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <motion.div
-                    className="font-bold text-lg"
-                    initial={{ color: "#facc15" }} // yellow-400
-                    animate={{ color: "#facc15" }}
-                    whileHover={{ color: "#ffffff" }}
-                  >
-                    {stat.number}
-                  </motion.div>
-                  <motion.div
-                    className="text-sm"
-                    initial={{ color: "#4b5563" }} // gray-600
-                    animate={{ color: "#4b5563" }}
-                    whileHover={{ color: "#ffffff" }}
-                  >
-                    {stat.label}
-                  </motion.div>
-                </motion.div>
-              ))}
-            </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl font-bold mb-4 mt-24">
+            <span className="text-5xl">About </span><span className="text-orange-500 text-5xl">Us</span>
             
-              </div>
-            </motion.div>
+          </h2>
+          <p className="mt-10">Transforming Spaces, Creating Futures.</p>
+          <p className="text-sm text-gray-600 mb-4">
+            Aditri Properties is a leading real estate brokerage, committed to delivering exceptional properties that redefine modern living. With a focus on innovative architecture, we present unique projects like Merlin, Optima, Ruby, Sansara, and Amara. Our services include:
+          </p>
+          <ul className="list-disc ml-5 text-sm text-gray-700 space-y-1 mb-4">
+            <li>Expert property consultations.</li>
+            <li>Comprehensive support throughout the buying process.</li>
+            <li>Focus on sustainable designs.</li>
+            <li>Tailored real estate solutions.</li>
+          </ul>
+          
+        </motion.div>
+      </div>
+
+      
+
+      <div className="text-center mb-12">
+        <h2 className="mb-4 text-3xl font-bold text-black md:text-4xl mt-14">
+          Our <span className="gradient-text text-orange-500">Projects</span>
+        </h2>
+      </div>
+
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+        {projects.map((project, i) => (
+          <motion.div
+          key={`${project.title}-${i}`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+          >
+            <Image src={project.image} alt={project.title} width={500} height={300} className="w-full h-60 object-cover" />
+            <div className="p-4">
+              <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+              <p className="text-sm text-gray-600">{project.desc}</p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="mt-4 text-xs font-semibold text-black"
+              >
+                VIEW PROJECTS
+              </motion.button>
+            </div>
           </motion.div>
-        </div>
-      </motion.section>
-       <Footer />
+        ))}
+      </div>
+    </div>
+    <Footer />
     </>
-  )
+  );
 }

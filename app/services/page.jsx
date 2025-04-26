@@ -68,7 +68,7 @@ const cardVariants = {
 export default function ServicesPage() {
   return (
     <>
-    <div className="py-16 px-4 md:px-20 bg-white">
+    <div className="py-16 px-4 md:px-10 bg-white">
       {/* Navbar */}
       <Navbar />
 

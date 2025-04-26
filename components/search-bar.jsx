@@ -19,7 +19,7 @@ export default function SearchBar() {
   return (
     <section className="relative z-20 mx-auto py-20 -mt-64 max-w-6xl px-4">
       <motion.div
-  className="rounded-xl bg-white/50 backdrop-blur-md border border-white/20 p-4 shadow-lg"
+  className="rounded-xl bg-white/65 backdrop-blur-md border border-white/20 p-4 shadow-lg"
   initial={{ y: 20, opacity: 0 }}
   animate={{ y: 0, opacity: 1 }}
   transition={{ duration: 0.5 }}

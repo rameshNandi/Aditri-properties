@@ -9,6 +9,10 @@ const heroImages = ["/Hero/img1.jpg", "/Hero/img2.jpg", "/Hero/img3.jpg"]
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
 
+  const fullHeadline = "Find Your Dream Home Today"
+  const [displayedText, setDisplayedText] = useState("")
+  const [currentIndex, setCurrentIndex] = useState(0)
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length)
@@ -16,9 +20,27 @@ export default function Hero() {
     return () => clearInterval(interval)
   }, [])
 
+  useEffect(() => {
+    let typingTimeout
+
+    if (currentIndex < fullHeadline.length) {
+      typingTimeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + fullHeadline[currentIndex])
+        setCurrentIndex((prev) => prev + 1)
+      }, 150) // Typing speed per letter
+    } else {
+      typingTimeout = setTimeout(() => {
+        setDisplayedText("")
+        setCurrentIndex(0)
+      }, 2000) // Wait 2 seconds after typing full text, then reset
+    }
+
+    return () => clearTimeout(typingTimeout)
+  }, [currentIndex, fullHeadline])
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background Image */}
+      {/* Background Images */}
       <div className="absolute inset-0 z-0">
         {heroImages.map((img, index) => (
           <motion.div
@@ -44,29 +66,28 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 flex h-full w-full items-center justify-center px-4 text-white">
         <div className="max-w-4xl text-center">
-          <motion.h1
-            className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Find Your <span className="text-orange-600">Dream Home</span> Today
-          </motion.h1>
+          {/* Typing Heading */}
+          <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+            {displayedText}
+            <span className="animate-pulse">...</span> {/* Blinking cursor */}
+          </h1>
 
+          {/* Subheadline */}
           <motion.p
             className="mb-8 text-lg md:text-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
           >
             Discover exclusive properties in prime locations with our premium real estate services
           </motion.p>
 
+          {/* Buttons */}
           <motion.div
             className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 2 }}
           >
             <Link href="/properties">
               <motion.button
@@ -77,7 +98,6 @@ export default function Hero() {
                 Browse Properties
               </motion.button>
             </Link>
-           
           </motion.div>
         </div>
       </div>
