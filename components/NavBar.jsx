@@ -15,7 +15,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="flex justify-center items-center gap-2">
-          <div className="lg:w-[30px] lg:h-[30px] w-[50px] h-[40px]">
+          <div className="lg:w-[40px] lg:h-[40px] w-[50px] h-[40px]">
             <Image src={logo1} alt="logo" className="h-full w-full" /></div>
           <div className="lg:w-[265px] lg:h-[50px] w-[150px] h-[40px]">
             <Image src={logo} alt="logo" className="h-full w-full" />

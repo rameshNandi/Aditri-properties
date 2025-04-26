@@ -18,7 +18,6 @@ const properties = [
     location: "Golabari Howrah",
     image: "/Home/sansarapic.jpg",
     beds: 5,
-    baths: 4,
     sqft: 4200,
     featured: true,
   },
@@ -28,7 +27,6 @@ const properties = [
     location: "Newtowan, Kalaberia, West Bengal",
     image: "/Home/2025-01-18.jpg",
     beds: 3,
-    baths: 3.5,
     sqft: 2800,
     featured: true,
   },
@@ -38,7 +36,6 @@ const properties = [
     location: "East Kolkata Twp",
     image: "/Home/gallery.webp",
     beds: 6,
-    baths: 5,
     sqft: 5600,
     featured: false,
   },
@@ -48,7 +45,6 @@ const properties = [
     location: "Rajarhat",
     image: "Home/merlin4.webp",
     beds: 2,
-    baths: 2,
     sqft: 1500,
     featured: false,
   },
@@ -58,7 +54,6 @@ const properties = [
     location: " Rajarhat Chowmata",
     image: "/Home/srijan2.JPG",
     beds: 4,
-    baths: 3,
     sqft: 3200,
     featured: false,
   },
@@ -68,7 +63,6 @@ const properties = [
     location: "EM Bypass",
     image: "/Home/10_about_image.jpg",
     beds: 4,
-    baths: 3.5,
     sqft: 3800,
     featured: false,
   },
@@ -138,17 +132,7 @@ export default function PropertyListings() {
                     </div>
                   </div>
 
-                  <motion.button
-                    className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-md transition-all hover:bg-white"
-                    onClick={() => toggleFavorite(property.id)}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <Heart
-                      className={`h-5 w-5 ${favorites.includes(property.id) ? "fill-orange-600 text-orange-600" : ""}`}
-                    />
-                  </motion.button>
-
+                
                   {property.featured && (
                     <div className="absolute left-0 top-4 bg-orange-600 px-4 py-1 text-sm font-semibold text-white">
                       Featured
@@ -169,10 +153,7 @@ export default function PropertyListings() {
                       <BedDouble className="mr-1 h-4 w-4 text-gray-500" />
                       <span className="text-sm text-gray-700">{property.beds} Beds</span>
                     </div>
-                    <div className="flex items-center">
-                      <Bath className="mr-1 h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-700">{property.baths} Baths</span>
-                    </div>
+                
                     <div className="flex items-center">
                       <Square className="mr-1 h-4 w-4 text-gray-500" />
                       <span className="text-sm text-gray-700">{property.sqft} sqft</span>

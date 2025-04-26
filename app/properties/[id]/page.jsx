@@ -27,7 +27,11 @@ const allProperties = [
     featured: true,
     description:
       "F Residences are luxury residential projects, often described as blend of global fashion style with modern comfort, offering a luxurious living experience. They are known for their Fashion TV-inspired designs and high-end amenities.",
-    amenities: ["24/7 Security", "High-speed Elevators", "Backup Power", "Conference Rooms", "Parking", "Cafeteria"],
+    amenities: ["Swimming pool,", 
+      "Gymnasium,",
+      "kids' play area",
+      "landscaped gardens",
+      "24/7 security",],
    
     agent: {
     },
@@ -44,12 +48,11 @@ const allProperties = [
     description:
       "Ambuja Utpalaa, known as is a residential project in Kolkata, India, offering 3, 4, and 5 BHK apartments. It's designed to blend nature and modern living with features like a 50,000 sq ft club, 70+ wellness amenities, and a 50% green cover",
     amenities: [
-      "Smart Building Systems",
-      "Fiber Optic Internet",
-      "Meeting Pods",
-      "Recreation Area",
-      "Food Court",
-      "EV Charging",
+      "Swimming pool",
+      "Gym",
+      "Landscaped gardens,",
+      "Residents Activity Centre",
+      "24/7 security",
     ],
   },
   {
@@ -65,12 +68,10 @@ const allProperties = [
     description:
       "Merlin Niyasa is a luxury residential project in Kolkata, offering spacious 3.5, 4, and 4.5 BHK apartments. It's located in a prime area, just 550 meters from EM Bypass. The project features two towers, each with 28 floors, and a total of 152 apartments. .",
     amenities: [
-      "Smart Building Systems",
-      "Fiber Optic Internet",
-      "Meeting Pods",
-      "Recreation Area",
-      "Food Court",
-      "EV Charging",
+      "Badminton court",
+      "Basketball court",
+      "Tennis court,",
+      "Kids' pool",
     ],
   },
   {
@@ -86,12 +87,12 @@ const allProperties = [
     description:
       "PS Sansara is a luxury residential project in Golabari, Howrah, West Bengal, developed by PS Group. It is known for its riverfront location on the Ganges, offering breathtaking views of the river and the iconic Howrah Bridge.",
     amenities: [
-      "Smart Building Systems",
-      "Fiber Optic Internet",
-      "Meeting Pods",
-      "Recreation Area",
-      "Food Court",
-      "EV Charging",
+      "Gym",
+      "Beach Access",
+      " Garden",
+      "fire fighting equipment",
+      " kids playing area ",
+      "24/7 security,",
     ],
   },
   {
@@ -106,14 +107,7 @@ const allProperties = [
     featured: true,
     description:
       "Spread across 11.3 acres, Optima by Srijan Realty stands as the grandest new entry in Rajarhat’s real estate landscape. With over 70% open space, this landmark development brings a refreshing blend of nature and urban living to one of the city’s most vibrant neighborhoods..",
-    amenities: [
-      "Smart Building Systems",
-      "Fiber Optic Internet",
-      "Meeting Pods",
-      "Recreation Area",
-      "Food Court",
-      "EV Charging",
-    ],
+    amenities: ["Fitness Facilities", "grand clubhouse", "large waterbody",],
   },
 
 
@@ -133,7 +127,7 @@ const allProperties = [
     featured: true,
     description:
       "Spread across 11.3 acres, Optima by Srijan Realty stands as the grandest new entry in Rajarhat’s real estate landscape. With over 70% open space, this landmark development brings a refreshing blend of nature and urban living to one of the city’s most vibrant neighborhoods.",
-    amenities: ["Swimming Pool", "Gym", "Clubhouse", "Children's Play Area", "Landscaped Gardens", "24/7 Security"],
+    amenities: ["Fitness Facilities", "grand clubhouse", "large waterbody",],
     yearBuilt: 2022,
   },
   {
@@ -151,12 +145,12 @@ const allProperties = [
     description:
       "PS Sansara is a prestigious luxury residential development nestled on Gola Bari Road, Howrah, right beside the well-known ILS Hospital. Developed by the esteemed. PS Sansara is not just a place to call home; it is a thoughtfully designed environment where elegance meets modern convenience.  ",
     amenities: [
-      "Private Pool",
+      "Gym",
       "Beach Access",
-      "Home Automation",
-      "Landscaped Garden",
-      "Outdoor Kitchen",
-      "Guest House",
+      " Garden",
+      "fire fighting equipment",
+      " kids playing area ",
+      "24/7 security,",
     ],
     yearBuilt: 2023,
   },
@@ -175,12 +169,10 @@ const allProperties = [
     description:
       "Niyasa is spread across an expansive land area of 3.23 acres, featuring two blocks with G+28 floors, housing a total of 152 residential units. The project offers a variety of spacious apartments, with super built-up areas ranging from 1,996 to 2,453 square feet.  ",
     amenities: [
-      "Private Pool",
-      "Beach Access",
-      "Home Automation",
-      "Landscaped Garden",
-      "Outdoor Kitchen",
-      "Guest House",
+      "Badminton court",
+      "Basketball court",
+      "Tennis court,",
+      "Kids' pool",
     ],
     yearBuilt: 2023,
   },
@@ -194,17 +186,15 @@ const allProperties = [
     propertyType: "Villa",
     area: "1,698 - 5,145  sq ft",
     beds: 4,
-    baths: 4.5,
     featured: true,
     description:
       "Utpalaa, known as  is a residential project in Kolkata, India, offering 3, 4, and 5 BHK apartments. It's designed to blend nature and modern living with features like a 50,000 sq ft club, 70+ wellness amenities, and a 50% green cover.  ",
     amenities: [
-      "Private Pool",
-      "Beach Access",
-      "Home Automation",
-      "Landscaped Garden",
-      "Outdoor Kitchen",
-      "Guest House",
+      "Swimming pool",
+      "Gym",
+      "Landscaped gardens,",
+      "Residents Activity Centre",
+      "24/7 security",
     ],
     yearBuilt: 2023,
   },
@@ -223,12 +213,11 @@ const allProperties = [
     description:
       "F Residences is a residential project that emphasizes a blend of luxury, fashion, and modern comfort, often featuring Fashion TV-inspired design elements. It's characterized by spacious apartments, interconnected green spaces, and world-class amenities.   ",
     amenities: [
-      "Private Pool", 
-      "Beach Access",
-      "Home Automation",
-      "Landscaped Garden",
-      "Outdoor Kitchen",
-      "Guest House",
+      "Swimming pool,", 
+      "Gymnasium,",
+      "kids' play area",
+      "landscaped gardens",
+      "24/7 security",
     ],
     yearBuilt: 2023,
   },
@@ -363,12 +352,7 @@ const locations = [
                 fill
                 className="object-cover"
               />
-              <button
-                className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md"
-                onClick={() => setIsFavorite(!isFavorite)}
-              >
-                <Heart size={24} className={isFavorite ? "fill-orange-600 text-orange-600" : "text-gray-600"} />
-              </button>
+              
               <button className="absolute top-4 left-4 bg-white p-2 rounded-full shadow-md">
                 <Share2 size={24} className="text-gray-600" />
               </button>
@@ -412,17 +396,11 @@ const locations = [
                     <Bed size={20} className="mr-2 text-orange-600" />
                     <div>
                       <div className="text-sm text-gray-500">Bedrooms</div>
-                      <div className="font-semibold">{property.beds}</div>
+                      <div className="font-semibold text-gray-500">{property.beds}</div>
                     </div>
                   </div>
 
-                  <div className="flex items-center">
-                    <Bath size={20} className="mr-2 text-orange-600" />
-                    <div>
-                      <div className="text-sm text-gray-500">Bathrooms</div>
-                      <div className="font-semibold">{property.baths}</div>
-                    </div>
-                  </div>
+                  
                 </>
               )}
 
@@ -474,15 +452,6 @@ const locations = [
 
             
 
-            <div className="flex space-x-4 w-20">
-              <motion.button
-                className="flex-1 border border-orange-600 text-orange-600 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-all"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Contact
-              </motion.button>
-            </div>
           </div>
         </div>
       </section>

@@ -18,7 +18,6 @@ const residentialProperties = [
     type: "Apartment",
     area: "11.3 sq ft",
     beds: 3,
-    baths: 2,
     featured: true,
   },
   {
@@ -29,7 +28,6 @@ const residentialProperties = [
     type: "Villa",
     area: "17.4 sq ft",
     beds: 4,
-    baths: 2,
     featured: true,
   },
   {
@@ -40,7 +38,6 @@ const residentialProperties = [
     type: "Apartment",
     area: "230610 sq. ft",
     beds: 2,
-    baths: 2,
     featured: false,
   },
   {
@@ -51,19 +48,16 @@ const residentialProperties = [
     type: "Apartment",
     area: "1,698 - 5,145  sq ft",
     beds: 5,
-    baths: 4,
     featured: true,
   },
   {
     id: 205,
     title: "F Residences",
     location: "Rajarhat, Kolkata",
-    price: "₹1.30 Cr",
     image: "/Home/merlin4.webp",
     type: "Penthouse",
     area: "960 - 1570sq ft",
-    beds: 3-4,
-    baths: 2-3,
+    beds: 2,
     featured: true,
   },
 ]
@@ -100,7 +94,9 @@ export default function ResidentialPropertiesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           > 
-         
+          <h2 className="mb-4 text-3xl font-bold text-white  md:text-4xl">
+          Get In <span className="gradient-text text-orange-500">Touch</span> With Us
+        </h2>
           
           </motion.h1>
           <motion.p
@@ -109,6 +105,7 @@ export default function ResidentialPropertiesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+
             Luxurious apartments, villas, and penthouses crafted with attention to detail for comfortable living
           </motion.p>
         </div>
@@ -221,15 +218,6 @@ export default function ResidentialPropertiesPage() {
                   fill
                   className="object-cover"
                 />
-                <button
-                  className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md"
-                  onClick={() => toggleFavorite(property.id)}
-                >
-                  <Heart
-                    size={20}
-                    className={favorites.includes(property.id) ? "fill-orange-600 text-orange-600" : "text-gray-600"}
-                  />
-                </button>
                 {property.featured && (
                   <div className="absolute top-4 left-4 bg-orange-600 text-white text-sm px-3 py-1 rounded-full">
                     Featured
@@ -252,10 +240,7 @@ export default function ResidentialPropertiesPage() {
                     <Bed size={16} className="mr-1" />
                     <span className="text-sm">{property.beds} Beds</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <BathIcon size={16} className="mr-1" />
-                    <span className="text-sm">{property.baths} Baths</span>
-                  </div>
+                  
                   <div className="flex items-center text-gray-600">
                     <Square size={16} className="mr-1" />
                     <span className="text-sm">{property.area}</span>

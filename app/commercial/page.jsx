@@ -186,15 +186,7 @@ export default function CommercialPropertiesPage() {
                   fill
                   className="object-cover"
                 />
-                <button
-                  className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md"
-                  onClick={() => toggleFavorite(property.id)}
-                >
-                  <Heart
-                    size={20}
-                    className={favorites.includes(property.id) ? "fill-orange-600 text-orange-600" : "text-gray-600"}
-                  />
-                </button>
+                
                 {property.featured && (
                   <div className="absolute top-4 left-4 bg-orange-600 text-white text-sm px-3 py-1 rounded-full">
                     Featured

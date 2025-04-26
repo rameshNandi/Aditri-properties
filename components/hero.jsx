@@ -6,10 +6,21 @@ import Link from "next/link"
 
 const heroImages = ["/Hero/img1.jpg", "/Hero/img2.jpg", "/Hero/img3.jpg"]
 
+// Break the headline into pieces with different colors
+const headlineParts = [
+  { text: "Find ", color: "text-white" },
+  { text: "Your ", color: "text-orange-500" },
+  { text: "Dream ", color: "text-white" },
+  { text: "Home ", color: "text-orange-500" },
+  { text: "Today", color: "text-white" },
+]
+
+// Combine all pieces to make a full text
+const fullHeadline = headlineParts.map((part) => part.text).join("")
+
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
 
-  const fullHeadline = "Find Your Dream Home Today"
   const [displayedText, setDisplayedText] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -27,16 +38,42 @@ export default function Hero() {
       typingTimeout = setTimeout(() => {
         setDisplayedText((prev) => prev + fullHeadline[currentIndex])
         setCurrentIndex((prev) => prev + 1)
-      }, 150) // Typing speed per letter
+      }, 150)
     } else {
       typingTimeout = setTimeout(() => {
         setDisplayedText("")
         setCurrentIndex(0)
-      }, 2000) // Wait 2 seconds after typing full text, then reset
+      }, 2000)
     }
 
     return () => clearTimeout(typingTimeout)
-  }, [currentIndex, fullHeadline])
+  }, [currentIndex])
+
+  // Helper to render colored text
+  const renderColoredText = () => {
+    let typedLength = 0
+
+    return headlineParts.map((part, idx) => {
+      const partText = part.text
+      const partLength = partText.length
+
+      if (currentIndex > typedLength) {
+        // Calculate how much of this part to show
+        const showLength = Math.min(currentIndex - typedLength, partLength)
+        const showText = partText.slice(0, showLength)
+
+        typedLength += partLength
+
+        return (
+          <span key={idx} className={part.color}>
+            {showText}
+          </span>
+        )
+      } else {
+        return null
+      }
+    })
+  }
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -68,7 +105,7 @@ export default function Hero() {
         <div className="max-w-4xl text-center">
           {/* Typing Heading */}
           <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            {displayedText}
+            {renderColoredText()}
             <span className="animate-pulse">...</span> {/* Blinking cursor */}
           </h1>
 
