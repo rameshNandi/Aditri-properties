@@ -18,25 +18,37 @@ const properties = [
     title: "SANSARA",
     location: "Golabari Howrah",
     image: "/Home/sansarapic.jpg",
-    beds:5,
+  bhkSqft: [
+      { bhk: "3", sqft: "2580 SQ FT" },
+      { bhk: "4", sqft: "3364 SQ FT" },
+      { bhk: "5", sqft: "4885 SQ FT" }
+    ],
     sqft: 4883,
     featured: true,
   },
   {
     id: 2,
     title: "OPTIMA",
-    location: "Newtowan, Kalaberia, West Bengal",
+    location: "Newtown, Kalaberia, West Bengal",
     image: "/Home/2025-01-18.jpg",
-    beds: 3,
+    bhkSqft: [
+      { bhk: "2", sqft: "1157 SQ FT" },
+      { bhk: "3", sqft: "2580 SQ FT" },
+      { bhk: "4", sqft: "3364 SQ FT" },
+    ],
     sqft: 1649,
     featured: true,
   },
   {
     id: 3,
-    title: "NIYASE",
+    title: "NIYASA",
     location: "East Kolkata Twp",
     image: "/Home/gallery.webp",
-    beds: 5,
+    bhkSqft: [
+      { bhk: "3.", sqft: "2580 SQ FT" },
+      { bhk: "4", sqft: "3364 SQ FT" },
+      { bhk: "5", sqft: "3480 SQ FT" }
+    ],
     sqft: 2453,
     featured: false,
   },
@@ -45,7 +57,11 @@ const properties = [
     title: "F RESIDENCY",
     location: "Rajarhat",
     image: "Home/merlin4.webp",
-    beds: 3,
+    bhkSqft: [
+      { bhk: "3", sqft: "2580 SQ FT" },
+      { bhk: "4", sqft: "3364 SQ FT" },
+      { bhk: "5", sqft: "3450 SQ FT" }
+    ],
     sqft: 1650,
     featured: false,
   },
@@ -54,7 +70,11 @@ const properties = [
     title: "OPTIMA",
     location: " Rajarhat Chowmata",
     image: "/Home/srijan2.JPG",
-    beds: 4,
+    bhkSqft: [
+      { bhk: "2", sqft: "1157 SQ FT" },
+      { bhk: "3", sqft: "2580 SQ FT" },
+      { bhk: "4", sqft: "3364 SQ FT" }
+    ],
     sqft: 1650,
     featured: false,
   },
@@ -63,7 +83,11 @@ const properties = [
     title: "UTPALA SASTHI",
     location: "EM Bypass",
     image: "/Home/10_about_image.jpg",
-    beds: 5,
+    bhkSqft: [
+      { bhk: "3", sqft: "2580 SQ FT" },
+      { bhk: "4", sqft: "3364 SQ FT" },
+      { bhk: "5", sqft: "5,145 SQ FT" }
+    ],
     sqft: 1485,
     featured: false,
   },
@@ -103,20 +127,20 @@ export default function PropertyListings() {
         </div>
 
         <Swiper
-        modules={[Navigation, Pagination, A11y, Autoplay]}
-        spaceBetween={30}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        autoplay={{
-          delay: 2000, // Change slide every 3 seconds
-          disableOnInteraction: false, // Keeps autoplay active after interaction
-        }}
-        breakpoints={{
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
-        }}
-      >
+          modules={[Navigation, Pagination, A11y, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 2000, // Change slide every 2 seconds
+            disableOnInteraction: false, // Keeps autoplay active after interaction
+          }}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
+          }}
+        >
           {properties.map((property) => (
             <SwiperSlide key={property.id}>
               <div className="group overflow-hidden rounded-xl bg-white shadow-lg transition-all hover:shadow-xl">
@@ -126,19 +150,6 @@ export default function PropertyListings() {
                     style={{ backgroundImage: `url(${property.image})` }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50" />
-
-                  <div className="absolute bottom-4 left-4">
-                    <div className="rounded-lg bg-black/70 px-3 py-1 text-lg font-bold text-white">
-                      {property.price}
-                    </div>
-                  </div>
-
-                
-                  {property.featured && (
-                    <div className="absolute left-0 top-4 bg-orange-600 px-4 py-1 text-sm font-semibold text-white">
-                      Featured
-                    </div>
-                  )}
                 </div>
 
                 <div className="p-6">
@@ -148,19 +159,17 @@ export default function PropertyListings() {
                     <span className="text-sm">{property.location}</span>
                   </div>
 
+                  {/* BHK Price Section */}
+                  <div className="space-y-2">
+                  {property.bhkSqft?.map((item, idx) => (
+                    <div key={idx} className="flex items-center justify-between text-gray-700">
+                      <span className="text-sm">{item.bhk} BHK</span>
+                      <span className="text-sm font-semibold">{item.sqft}</span>
+                    </div>
+                  ))}
                   
-                  <div className="mb-6 flex justify-between border-t border-gray-100 pt-4">
-                    <div className="flex items-center">
-                      <BedDouble className="mr-1 h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-700">{property.beds} BHK</span>
-                    </div>
-                
-                    <div className="flex items-center">
-                      <Square className="mr-1 h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-700">{property.sqft} SQ FT</span>
-                    </div>
                   </div>
-                  
+
                   <Link href={`/properties/${property.id}`}>
                     <motion.div
                       className="flex items-center justify-center rounded-lg bg-orange-600 px-4 py-2 text-white transition-all hover:bg-orange-700"
@@ -198,6 +207,7 @@ export default function PropertyListings() {
     </section>
   )
 }
+
 
 function MapPin(props) {
   return (

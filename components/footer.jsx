@@ -23,7 +23,7 @@ export default function Footer() {
           >
              {/* Logo */}
                     <div className="flex justify-center items-center gap-1">
-                      <div className="lg:w-[100px] lg:h-[100px] w-[150px] h-[40px]">
+                      <div className="lg:w-[150px] lg:h-[150px] w-[150px] h-[40px]">
                         <Image src={logo} alt="logo" className="h-full w-full" />
                       </div>
                     </div>
@@ -128,13 +128,13 @@ export default function Footer() {
                   <input
                     type="email"
                     placeholder="example@gmail.com"
-                    className="w-full px-4 py-2 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-white bg-orange-50"
+                    className="w-full px-4 py-2 rounded-md border-orange-500 border-2  text-black focus:outline-none focus:ring-2 focus:ring-orange-500 bg-orange-50"
                   />
                 </div>
                 <div className="mb-4">
                   <textarea
                     placeholder="Your message..."
-                    className="w-full px-4 py-2 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-white bg-orange-50"
+                    className="w-full px-4 py-2 rounded-md text-black border-orange-500 border-2  focus:outline-none focus:ring-2 focus:ring-white bg-orange-50"
                     rows="4"
                   ></textarea>
                 </div>

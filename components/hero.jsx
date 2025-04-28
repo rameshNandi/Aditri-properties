@@ -1,12 +1,15 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 
-const heroImages = ["/Hero/img1.jpg", "/Hero/img2.jpg", "/Hero/img3.jpg"]
+const heroImages = [
+  "/Hero/Niyasa_Website_Gallery_1436_x_719_1_8543ea3a99.webp",
+  "/Hero/sansara2.jpg",
+  "/Hero/2025-01-18.jpg",
+]
 
-// Break the headline into pieces with different colors
 const headlineParts = [
   { text: "Find ", color: "text-white" },
   { text: "Your ", color: "text-orange-500" },
@@ -15,14 +18,13 @@ const headlineParts = [
   { text: "Today", color: "text-white" },
 ]
 
-// Combine all pieces to make a full text
 const fullHeadline = headlineParts.map((part) => part.text).join("")
 
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
-
   const [displayedText, setDisplayedText] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,40 +36,57 @@ export default function Hero() {
   useEffect(() => {
     let typingTimeout
 
-    if (currentIndex < fullHeadline.length) {
-      typingTimeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + fullHeadline[currentIndex])
-        setCurrentIndex((prev) => prev + 1)
-      }, 150)
+    if (!isDeleting) {
+      if (currentIndex < fullHeadline.length) {
+        typingTimeout = setTimeout(() => {
+          setDisplayedText((prev) => prev + fullHeadline.slice(currentIndex, currentIndex + 2))
+          setCurrentIndex((prev) => prev + 2)
+        }, 60) // faster typing
+      } else {
+        typingTimeout = setTimeout(() => {
+          setIsDeleting(true)
+        }, 1500)
+      }
     } else {
-      typingTimeout = setTimeout(() => {
-        setDisplayedText("")
-        setCurrentIndex(0)
-      }, 2000)
+      if (currentIndex > 0) {
+        typingTimeout = setTimeout(() => {
+          setDisplayedText((prev) => prev.slice(0, -2))
+          setCurrentIndex((prev) => prev - 2)
+        }, 40) // faster deleting
+      } else {
+        typingTimeout = setTimeout(() => {
+          setIsDeleting(false)
+        }, 800)
+      }
     }
 
     return () => clearTimeout(typingTimeout)
-  }, [currentIndex])
+  }, [currentIndex, isDeleting])
 
-  // Helper to render colored text
   const renderColoredText = () => {
     let typedLength = 0
+    let renderedLength = displayedText.length
 
     return headlineParts.map((part, idx) => {
       const partText = part.text
       const partLength = partText.length
 
-      if (currentIndex > typedLength) {
-        // Calculate how much of this part to show
-        const showLength = Math.min(currentIndex - typedLength, partLength)
+      if (renderedLength > typedLength) {
+        const showLength = Math.min(renderedLength - typedLength, partLength)
         const showText = partText.slice(0, showLength)
 
         typedLength += partLength
 
         return (
-          <span key={idx} className={part.color}>
+          <motion.span
+            key={idx}
+            className={part.color}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.08, ease: "easeInOut" }}
+          >
             {showText}
-          </span>
+          </motion.span>
         )
       } else {
         return null
@@ -86,7 +105,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{
               opacity: currentImage === index ? 1 : 0,
-              transition: { duration: 1.5 },
+              transition: { duration: 1.2, ease: "easeInOut" },
             }}
           >
             <div
@@ -104,9 +123,26 @@ export default function Hero() {
       <div className="relative z-10 flex h-full w-full items-center justify-center px-4 text-white">
         <div className="max-w-4xl text-center">
           {/* Typing Heading */}
-          <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl flex justify-center">
             {renderColoredText()}
-            <span className="animate-pulse">..</span> {/* Blinking cursor */}
+            {/* Cursor animation */}
+            <AnimatePresence>
+              {!isDeleting && (
+                <motion.span
+                  className="ml-1"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    duration: 0.1,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                >
+                  
+                </motion.span>
+              )}
+            </AnimatePresence>
           </h1>
 
           {/* Subheadline */}
@@ -114,7 +150,7 @@ export default function Hero() {
             className="mb-8 text-lg md:text-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.5 }}
+            transition={{ duration: 0.8, delay: 1.5, ease: "easeInOut" }}
           >
             Discover exclusive properties in prime locations with our premium real estate services
           </motion.p>
@@ -124,7 +160,7 @@ export default function Hero() {
             className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2 }}
+            transition={{ duration: 0.8, delay: 2, ease: "easeInOut" }}
           >
             <Link href="/properties">
               <motion.button
@@ -138,9 +174,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-
     </section>
   )
 }

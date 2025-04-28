@@ -3,8 +3,8 @@
 import { motion } from "framer-motion"
 
 const clients = [
-  { id: 1, name: "TechSolutions Inc.", logo: "/Home/Optime_logo_2019_rgb.png" },
-  { id: 2, name: "Global Finance", logo: "/Home/merlin-group-logo.png" },
+  { id: 1, name: "TechSolutions Inc.", logo: "/Home/" },
+  { id: 2, name: "Global Finance", logo: "/Home/"},
   { id: 3, name: "Retail Ventures", logo: "/Home/kruqlpw_1729333702_525789081_O.jpg" },
   { id: 4, name: "Luxury Hotels", logo: "/Home/vinayaklogo.png" },
   { id: 5, name: "Healthcare Group", logo: "/Home/rubylogo.jpeg" },

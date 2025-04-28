@@ -139,7 +139,7 @@ const allProperties = [
     baths: 2,
     featured: true,
     description:
-      "Spread across 11.3 acres, Optima by Srijan Realty stands as the grandest new entry in Rajarhat’s real estate landscape. With over 70% open space, this landmark development brings a refreshing blend of nature and urban living to one of the city’s most vibrant neighborhoods.",
+      "Spread across 11.3 acres, Optima Realty stands as the grandest new entry in Rajarhat’s real estate landscape. With over 70% open space, this landmark development brings a refreshing blend of nature and urban living to one of the citys most vibrant neighborhoods.",
     amenities: ["Fitness Facilities", "grand clubhouse", "large waterbody",],
     yearBuilt: 2022,
   },
@@ -162,7 +162,7 @@ const allProperties = [
     baths: 4.5,
     featured: true,
     description:
-      "PS Sansara is a prestigious luxury residential development nestled on Gola Bari Road, Howrah, right beside the well-known ILS Hospital. Developed by the esteemed. PS Sansara is not just a place to call home; it is a thoughtfully designed environment where elegance meets modern convenience.  ",
+      "Sansara is a prestigious luxury residential development nestled on Gola Bari Road, Howrah, right beside the well-known ILS Hospital. it is a thoughtfully designed environment where elegance meets modern convenience.  ",
     amenities: [
       "Gym",
       "Beach Access",

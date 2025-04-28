@@ -90,7 +90,7 @@ export default function Testimonials() {
             What Our <span className="text-orange-600">Clients</span> Say
           </h2>
           <p className="mx-auto max-w-2xl text-gray-400">
-            Hear from our satisfied clients about their experience working with our team
+            Hear from our satisfied clients about their experience working.
           </p>
         </motion.div>
 
