@@ -10,7 +10,7 @@ const projects = [
     id: 1,
     title: "Optima",
     location: "Newtown Kalaberia, West Bangal",
-    description: "Experience Modern Living with Premium Amenities at Srijan Optima, New Town, Kolkata Srijan Realty has launched Srijan Optima a residential project located in Rajarhat New Town, Kolkata.",
+    description: "Experience Modern Living with Premium Amenities at Optima, New Town, Kolkata Realty has launched Optima a residential project located in Rajarhat New Town, Kolkata.",
     image: "Home/optima2.jpg",
     type: "commercial",
     area: "11.3 sq ft",
@@ -21,7 +21,7 @@ const projects = [
     id: 2,
     title: "Sansara",
     location: "Golabari Howrah",
-    description: "Sansara is a luxury residential project in Howrah, West Bengal, developed by the PS Group.",
+    description: "Sansara is a luxury residential project in Howrah, West Bengal,.",
     image: "/Home/sansara2.jpg",
     type: "residential",
     area: "17.4 sq ft",
@@ -32,7 +32,7 @@ const projects = [
     id: 3,
     title: "Niyasa",
     location: "East Kolkata Township",
-    description: "Merlin Niyasa is a luxury residential project in Kolkata, located within the East Kolkata Township, specifically near Ruby Crossing on the EM Bypass. ",
+    description: "Niyasa is a luxury residential project in Kolkata, located within the East Kolkata Township. ",
     image: "/Home/niyasha2.webp",
     type: "commercial",
     area: "230610 sq. ft",
@@ -41,9 +41,9 @@ const projects = [
   },
   {
     id: 4,
-    title: "Utara Sasthi",
+    title: "Utpala Sasthi",
     location: "EM Bypass, Kolkata",
-    description: "Ambuja Utpalaa is a luxury residential project in Ruby, Kolkata, developed by Ambuja Neotia. It offers spacious 3, 4, and 5 BHK apartments with a range of amenities and modern design. ",
+    description: "It offers spacious 3, 4, and 5 BHK apartments with a range of amenities and modern design. ",
     image: "/Home/10_about_image.jpg",
     type: "residential",
     area: "1,698 - 5,145  sq ft",
@@ -54,7 +54,7 @@ const projects = [
     id: 5,
     title: "F Residences",
     location: "Rajarhat",
-    description: "F Residences, a luxury development in Rajarhat, Kolkata, is a collaboration between Merlin Group and Fashion TV",
+    description: "F Residences, a luxury development in Rajarhat, Kolkata.",
     image: "/Home/merlin4.webp",
     type: "commercial",
     area: "960 - 1570sq ft",
@@ -115,7 +115,7 @@ export default function FeaturedProjects() {
   return (
     <section className="py-2 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 ">
         <motion.div
           className="absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-orange-500/5 blur-3xl"
           animate={{
@@ -143,7 +143,7 @@ export default function FeaturedProjects() {
         />
       </div>
 
-      <div className="container mx-auto max-w-[74%] px-4 relative z-10">
+      <div className="container mx-auto max-w-[74%] px-4 relative z-10 -mt-2">
         <motion.div
           className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -204,10 +204,6 @@ export default function FeaturedProjects() {
                       <p className="text-sm text-gray-400">Total Area</p>
                       <p className="text-lg font-semibold text-white">{projects[activeIndex].area}</p>
                     </div>
-                    <div className="rounded-lg bg-gray-800 p-4">
-                      <p className="text-sm text-gray-400">Completion</p>
-                      <p className="text-lg font-semibold text-white">{projects[activeIndex].completion}</p>
-                    </div>
                   </div>
 
                   <Link href="/properties">
@@ -243,6 +239,7 @@ export default function FeaturedProjects() {
             ))}
           </div>
 
+          
           <motion.button
             className="absolute left-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition-all hover:bg-orange-500"
             onClick={prevProject}
@@ -252,6 +249,8 @@ export default function FeaturedProjects() {
             <ChevronLeft className="h-6 w-6" />
           </motion.button>
 
+
+          
           <motion.button
             className="absolute right-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm transition-all hover:bg-orange-500"
             onClick={nextProject}
@@ -261,6 +260,8 @@ export default function FeaturedProjects() {
             <ChevronRight className="h-6 w-6" />
           </motion.button>
         </div>
+
+
 
         <div className="mt-12 text-center">
           <Link href="/properties">

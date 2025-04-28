@@ -17,7 +17,7 @@ export default function SearchBar() {
   }
 
   return (
-    <section className="relative z-20 mx-auto py-20 -mt-64 max-w-6xl px-4">
+    <section className="relative z-20 mx-auto py-20 max-w-6xl px-4 -mt-20">
       <motion.div
   className="rounded-xl bg-white/65 backdrop-blur-md border border-white/20 p-4 shadow-lg"
   initial={{ y: 20, opacity: 0 }}
@@ -51,7 +51,7 @@ export default function SearchBar() {
                     <input
                       type="text"
                       placeholder="Location"
-                      className="w-full border-none bg-transparent text-gray-900 outline-none"
+                      className="w-full border-none bg-transparent text-black outline-none"
                       value={location}
                       onChange={(e) => setLocation(e.target.value)}
                     />

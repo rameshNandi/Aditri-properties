@@ -10,8 +10,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 right-0 p-4 z-50 mx-auto flex items-center justify-center">
-      <nav className="w-full md:w-[90%] lg:w-[80%] h-[50px] lg:h-[60px] flex items-center justify-between rounded-lg bg-white/65 p-4 backdrop-blur-md shadow-lg">
+    <div className="fixed top-0 left-0 right-0 p-4 z-50 mx-auto flex items-center justify-center  ">
+      <nav className="w-full md:w-[90%] lg:w-[80%] h-[60px] lg:h-[60px] flex items-center justify-between rounded-lg bg-white/65 p-4 backdrop-blur-md shadow-lg">
 
         {/* Logo */}
         <div className="flex justify-center items-center gap-2">

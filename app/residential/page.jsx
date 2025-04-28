@@ -16,7 +16,7 @@ const residentialProperties = [
     location: "Newtown Kalaberia, West Bangal",
     image: "/Home/optima2.jpg",
     type: "Apartment",
-    area: "11.3 sq ft",
+    area: "921- 1649 sq ft",
     beds: 3,
     featured: true,
   },
@@ -26,7 +26,7 @@ const residentialProperties = [
     location: "Golabari Howrah, West Bangal",
     image: "/Home/sansara2.jpg",
     type: "Villa",
-    area: "17.4 sq ft",
+    area: "2515 - 4885 sq ft",
     beds: 4,
     featured: true,
   },
@@ -36,7 +36,7 @@ const residentialProperties = [
     location: "East Kolkata Township",
     image: "/Home/niyasha2.webp",
     type: "Apartment",
-    area: "230610 sq. ft",
+    area: "2453 sq. ft",
     beds: 2,
     featured: false,
   },
@@ -95,7 +95,7 @@ export default function ResidentialPropertiesPage() {
             transition={{ duration: 0.6 }}
           > 
           <h2 className="mb-4 text-3xl font-bold text-white  md:text-4xl">
-          Get In <span className="gradient-text text-orange-500">Touch</span> With Us
+         Resid<span className="gradient-text text-orange-500">ential</span>
         </h2>
           
           </motion.h1>

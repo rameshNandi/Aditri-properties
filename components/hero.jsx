@@ -106,7 +106,7 @@ export default function Hero() {
           {/* Typing Heading */}
           <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
             {renderColoredText()}
-            <span className="animate-pulse">...</span> {/* Blinking cursor */}
+            <span className="animate-pulse">..</span> {/* Blinking cursor */}
           </h1>
 
           {/* Subheadline */}
@@ -140,16 +140,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
-      >
-        <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </motion.div>
+
     </section>
   )
 }

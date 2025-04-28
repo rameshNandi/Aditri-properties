@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Building2, Building, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import SearchBar from "./search-bar"
 
 export default function PropertyCategories() {
   const containerVariants = {
@@ -55,7 +56,7 @@ export default function PropertyCategories() {
         />
       </div>
 
-      <div className="container mx-auto max-w-[74%] px-4 py-12 mt-0 relative z-10">
+      <div className="container mx-auto max-w-[74%] px-4 py-12 relative z-10 -mt-20">
         <motion.div
           className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -78,6 +79,8 @@ export default function PropertyCategories() {
           </p>
         </motion.div>
 
+        <SearchBar/>
+
         <motion.div
           className="grid gap-8 md:grid-cols-2"
           variants={containerVariants}
@@ -96,12 +99,13 @@ export default function PropertyCategories() {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/20 backdrop-blur-sm">
                 <Building2 className="h-8 w-8 text-orange-500" />
               </div>
-              <h3 className="mb-2 text-3xl font-bold text-white">Commercial Properties</h3>
+              <h3 className="mb-2 text-3xl font-bold text-white">
+              Residential Properties</h3>
               <p className="mb-6 max-w-md text-gray-300">
-                Premium office spaces, retail outlets, and industrial facilities designed for maximum efficiency and
-                growth
+              Luxurious apartments, villas, and penthouses crafted with attention to detail for comfortable living
+               
               </p>
-              <Link href="/commercial">
+              <Link href="/residential">
                 <motion.button
                   className="flex items-center rounded-full border border-orange-500 bg-orange-500/10 px-6 py-3 font-medium text-white backdrop-blur-sm transition-all hover:bg-orange-500"
                   whileHover={{
@@ -110,7 +114,8 @@ export default function PropertyCategories() {
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Explore Commercial
+                Explore Residential
+                  
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </motion.button>
               </Link>
@@ -128,11 +133,12 @@ export default function PropertyCategories() {
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-orange-500/20 backdrop-blur-sm">
                 <Building className="h-8 w-8 text-orange-500" />
               </div>
-              <h3 className="mb-2 text-3xl font-bold text-white">Residential Properties</h3>
+              <h3 className="mb-2 text-3xl font-bold text-white">Commercial Properties</h3>
               <p className="mb-6 max-w-md text-gray-300">
-                Luxurious apartments, villas, and penthouses crafted with attention to detail for comfortable living
+              Premium office spaces, retail outlets, and industrial facilities designed for maximum efficiency and
+              growth
               </p>
-              <Link href="/residential">
+              <Link href="/commercial">
                 <motion.button
                   className="flex items-center rounded-full border border-orange-500 bg-orange-500/10 px-6 py-3 font-medium text-white backdrop-blur-sm transition-all hover:bg-orange-500"
                   whileHover={{
@@ -141,7 +147,7 @@ export default function PropertyCategories() {
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Explore Residential
+                Explore Commercial  
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </motion.button>
               </Link>

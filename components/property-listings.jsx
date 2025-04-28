@@ -11,14 +11,15 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
+
 const properties = [
   {
     id: 1,
     title: "SANSARA",
     location: "Golabari Howrah",
     image: "/Home/sansarapic.jpg",
-    beds: 5,
-    sqft: 4200,
+    beds:5,
+    sqft: 4883,
     featured: true,
   },
   {
@@ -27,7 +28,7 @@ const properties = [
     location: "Newtowan, Kalaberia, West Bengal",
     image: "/Home/2025-01-18.jpg",
     beds: 3,
-    sqft: 2800,
+    sqft: 1649,
     featured: true,
   },
   {
@@ -35,8 +36,8 @@ const properties = [
     title: "NIYASE",
     location: "East Kolkata Twp",
     image: "/Home/gallery.webp",
-    beds: 6,
-    sqft: 5600,
+    beds: 5,
+    sqft: 2453,
     featured: false,
   },
   {
@@ -44,8 +45,8 @@ const properties = [
     title: "F RESIDENCY",
     location: "Rajarhat",
     image: "Home/merlin4.webp",
-    beds: 2,
-    sqft: 1500,
+    beds: 3,
+    sqft: 1650,
     featured: false,
   },
   {
@@ -54,7 +55,7 @@ const properties = [
     location: " Rajarhat Chowmata",
     image: "/Home/srijan2.JPG",
     beds: 4,
-    sqft: 3200,
+    sqft: 1650,
     featured: false,
   },
   {
@@ -62,8 +63,8 @@ const properties = [
     title: "UTPALA SASTHI",
     location: "EM Bypass",
     image: "/Home/10_about_image.jpg",
-    beds: 4,
-    sqft: 3800,
+    beds: 5,
+    sqft: 1485,
     featured: false,
   },
 ]
@@ -151,12 +152,12 @@ export default function PropertyListings() {
                   <div className="mb-6 flex justify-between border-t border-gray-100 pt-4">
                     <div className="flex items-center">
                       <BedDouble className="mr-1 h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-700">{property.beds} Beds</span>
+                      <span className="text-sm text-gray-700">{property.beds} BHK</span>
                     </div>
                 
                     <div className="flex items-center">
                       <Square className="mr-1 h-4 w-4 text-gray-500" />
-                      <span className="text-sm text-gray-700">{property.sqft} sqft</span>
+                      <span className="text-sm text-gray-700">{property.sqft} SQ FT</span>
                     </div>
                   </div>
                   

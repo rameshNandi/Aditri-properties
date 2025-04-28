@@ -16,7 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50">
       <NavBar />
       <Hero />
-      <SearchBar />
+      {/* <SearchBar /> */}
       <PropertyCategories />
       <FeaturedProjects />
       <PropertyListings />

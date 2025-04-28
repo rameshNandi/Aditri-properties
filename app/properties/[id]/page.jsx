@@ -18,6 +18,13 @@ const allProperties = [
   {
     id: 101,
     title: "F Residences",
+    images : [
+      "/Home/merlin4.webp",
+      "/Home/merlin5.jpg",
+      "/Home/merlin.webp",
+      "/Home/merlin2.webp",
+      "/Home/merlin3.png",
+    ],
     location: "Rajarhat, Kolkata",
     price: "₹4.5 Cr",
     image: "/Home/merlin2.avif",
@@ -118,7 +125,13 @@ const allProperties = [
     title: "Optima",
     location: "Newtown Kalaberia, West Bangal",
     price: "₹ 4   Cr",
-    image: "/Home/2024-11-16.jpg",
+    images: [
+      "/optima/optima2.webp",
+      "/optima/optima1.webp",
+      "/optima/optima3.webp",
+      "/optima/optima4.webp",
+      "/optima/optima5.webp",
+    ],
     type: "residential",
     propertyType: "Apartment",
     area: "1079 (SBUA) Sq.Ft",
@@ -135,7 +148,13 @@ const allProperties = [
     title: "Sansara",
     location: "EGolabari Howrah, West Bangal",
     price: "₹4.5 Cr",
-    image: "/Home/The-River-and-water-Cascade.jpg",
+    images: [
+      "/Sansara/sansara3.jpg",
+      "/Sansara/sansara2.webp",
+      "/Sansara/sansara1.webp",
+      "/Sansara/sansara4.webp",
+      "/Sansara/sansara5.webp",
+    ],
     type: "residential",
     propertyType: "Villa",
     area: "230610 sq. ft",
@@ -294,13 +313,7 @@ const locations = [
 
 
   // Mock images for gallery
-  const propertyImages = [
-    "/Home/merlin4.webp",
-    "/Home/merlin5.jpg",
-    "/Home/merlin.webp",
-    "/Home/merlin2.webp",
-    "/Home/merlin3.png",
-  ]
+  // const property
 
   useEffect(() => {
     // Simulate API call to fetch property details
@@ -346,7 +359,7 @@ const locations = [
             <div className="relative h-[400px] rounded-xl overflow-hidden">
               <Image
                 src={
-                  propertyImages[activeImage] ? propertyImages[activeImage] : "/placeholder.svg?height=400&width=600"
+                  property.images[activeImage] ? property.images[activeImage] : "/placeholder.svg?height=400&width=600"
                 }
                 alt={property.title}
                 fill
@@ -359,20 +372,20 @@ const locations = [
             </div>
 
             <div className="grid grid-cols-5 gap-2">
-              {propertyImages.map((img, index) => (
-                <div
-                  key={index}
-                  className={`relative h-20 rounded-lg overflow-hidden cursor-pointer border-2 ${activeImage === index ? "border-orange-600" : "border-transparent"}`}
-                  onClick={() => setActiveImage(index)}
-                >
-                  <Image
-                    src={img ? img : "/placeholder.svg?height=100&width=100"}
-                    alt={`Gallery image ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
+            {property.images.map((img, index) => (
+              <div
+                key={index}
+                className={`relative h-20 rounded-lg overflow-hidden cursor-pointer border-2 ${activeImage === index ? "border-orange-600" : "border-transparent"}`}
+                onClick={() => setActiveImage(index)}
+              >
+                <Image
+                  src={img ? img : "/placeholder.svg?height=100&width=100"}
+                  alt={`Gallery image ${index + 1}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
             </div>
           </div>
 
