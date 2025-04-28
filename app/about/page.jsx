@@ -20,8 +20,8 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: 'Merlin',
-    desc: 'Merlin Group is a renowned real estate developer, crafting innovative residential and commercial spaces with a legacy of excellence.',
+    title: 'Niyasa',
+    desc: 'Niyasa is a luxury residential project in Kolkata, located within the East Kolkata Township.',
     image: '/Home/merlin4.webp'
   },
   {
@@ -29,24 +29,19 @@ const projects = [
     desc: 'Srijan offers innovative spaces. Optima ensures modern efficiency, and Peace embodies tranquil living with thoughtful architecture and design.',
     image: '/Home/optima2.jpg'
   },
-  {
-    title: 'Ruby Project',
-    desc: 'Ruby Project offers serene living spaces designed for tranquility, blending modern architecture with peaceful surroundings for ultimate relaxation.',
-    image: '/Home/ruby.jpg'
-  },
   { 
     title: 'Sansara',
-    desc: 'PS Group’s Sansara offers serene living with innovative design, blending luxury and tranquility for a peaceful, harmonious lifestyle.',
+    desc: 'Sansara offers serene living with innovative design, blending luxury and tranquility for a peaceful, harmonious lifestyle.',
     image: '/Home/sansara2.jpg'
   },
   {
-    title: 'Amara',
-    desc: 'Vinayak Amara offers tranquil living amidst lush green surroundings, blending modern amenities with serene environments for ultimate peace.',
+    title: 'Utpala Sasthi',
+    desc: 'Utpala Sasthi offers spacious 3, 4, and 5 BHK apartments with a range of amenities and modern design.',
     image: '/Home/amara.jpg'
   },
   {
-    title: 'Optima',
-    desc: 'Srijan offers innovative spaces. Optima ensures modern efficiency, and Peace embodies tranquil living with thoughtful architecture and design.',
+    title: 'FResidences',
+    desc: 'F Residences, a luxury development in Rajarhat, Kolkata.',
     image: '/Home/optima2.jpg'
   },
 ];
